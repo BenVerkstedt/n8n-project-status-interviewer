@@ -9,8 +9,8 @@
       "type": "n8n-nodes-base.googleDocsTool",
       "typeVersion": 2,
       "position": [
-        -640,
-        336
+        -688,
+        192
       ],
       "id": "a87ffc66-5c10-43c7-8ffd-1ad29e4e9869",
       "name": "Get a document in Google Docs",
@@ -26,8 +26,8 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -1664,
-        -752
+        -1712,
+        -720
       ],
       "id": "eef6128a-d793-415f-85ea-603d0e564357",
       "name": "When clicking ‘Execute workflow’"
@@ -46,8 +46,8 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.3,
       "position": [
-        -768,
-        -336
+        -816,
+        -496
       ],
       "id": "1183e97c-bc83-443e-8a5d-7daf53438031",
       "name": "request for status message",
@@ -66,8 +66,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -768,
-        336
+        -816,
+        192
       ],
       "id": "20a30a50-cb76-4ffa-b785-92a164ec20cb",
       "name": "Google Gemini Chat Model",
@@ -85,8 +85,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -416,
-        224
+        -464,
+        64
       ],
       "id": "83fed8d8-d9b0-49ba-9a4d-d718ad704dc7",
       "name": "Respond to Webhook2"
@@ -114,8 +114,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -768,
-        544
+        -816,
+        400
       ],
       "id": "5b6830df-afaa-483d-bc02-454e2994d060",
       "name": "get_date_for_agent1"
@@ -130,8 +130,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -1664,
-        224
+        -1712,
+        64
       ],
       "id": "7358be3f-9399-4d6d-9354-ea3dd10f06a4",
       "name": "Fetch last report",
@@ -148,8 +148,8 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.1,
       "position": [
-        -768,
-        112
+        -816,
+        -48
       ],
       "id": "bff33fa2-8f4f-47e9-97fd-6891e0a1f0b2",
       "name": "Report fetcher"
@@ -164,8 +164,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -1664,
-        544
+        -1712,
+        400
       ],
       "id": "98b89747-80ed-4094-8750-cd54bab8ead0",
       "name": "Submit status report",
@@ -179,8 +179,8 @@
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        -544,
-        544
+        -592,
+        400
       ],
       "id": "b2428093-b6d9-4f4d-b4e9-748cd607b589",
       "name": "Create a document",
@@ -198,8 +198,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        352,
-        544
+        304,
+        400
       ],
       "id": "6b2126d8-1a99-4d3a-acbb-e5e46bcca887",
       "name": "Respond to Webhook4"
@@ -220,8 +220,8 @@
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        -320,
-        544
+        -368,
+        400
       ],
       "id": "48676d58-2338-435c-b1a8-d1a4d7277c14",
       "name": "Update a document",
@@ -249,8 +249,8 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3,
       "position": [
-        -1664,
-        -336
+        -1712,
+        -496
       ],
       "id": "80d0b6be-8443-4f8e-8d0c-0ff94c736c38",
       "name": "Schedule Trigger"
@@ -265,8 +265,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -1664,
-        -112
+        -1712,
+        -272
       ],
       "id": "11b0c9ac-388a-47fd-887c-33a59cc540f7",
       "name": "verify_slot_is_empty",
@@ -295,8 +295,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -1440,
-        -112
+        -1488,
+        -272
       ],
       "id": "b1ee0694-4f3f-4dbb-a0ec-a79ce586ebbe",
       "name": "get_current_date1"
@@ -308,8 +308,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -768,
-        -112
+        -816,
+        -272
       ],
       "id": "b56850d5-1f25-490a-b783-8e1a22bf002d",
       "name": "Respond to Webhook"
@@ -345,8 +345,8 @@
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1.1,
       "position": [
-        -1216,
-        -112
+        -1264,
+        -272
       ],
       "id": "ab0c7cd2-8068-43c4-8667-bec906b05b50",
       "name": "get_this_kw_row",
@@ -359,8 +359,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -992,
-        -112
+        -1040,
+        -272
       ],
       "id": "301aad13-72e2-4711-8f71-c4516fcad973",
       "name": "return_boolean"
@@ -380,8 +380,8 @@
       "type": "n8n-nodes-base.sort",
       "typeVersion": 1,
       "position": [
-        -1216,
-        224
+        -1264,
+        64
       ],
       "id": "cc0a71ce-9868-4b03-b033-b27eef51f9d5",
       "name": "Sort createdAt desc"
@@ -408,8 +408,8 @@
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1.1,
       "position": [
-        -1440,
-        224
+        -1488,
+        64
       ],
       "id": "9b984dc6-344c-4633-8b90-fb51647e14c5",
       "name": "get_rows"
@@ -419,8 +419,8 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        -992,
-        224
+        -1040,
+        64
       ],
       "id": "d1acda32-2eb9-4ba5-9a99-0cf698369f75",
       "name": "Select earliest entry"
@@ -537,8 +537,8 @@
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1.1,
       "position": [
-        -96,
-        544
+        -144,
+        400
       ],
       "id": "c00b82b8-1f1c-4735-9e45-e5ca013d6a35",
       "name": "Insert row"
@@ -558,8 +558,8 @@
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1.1,
       "position": [
-        -1440,
-        -336
+        -1488,
+        -496
       ],
       "id": "72aa3a60-4ae6-43d7-a2f4-2eec3d8b4880",
       "name": "Get row(s)"
@@ -571,8 +571,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1216,
-        -336
+        -1264,
+        -496
       ],
       "id": "8af9f327-59e4-4c86-90f6-fc0f661dd1e5",
       "name": "Code in JavaScript"
@@ -606,8 +606,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -992,
-        -336
+        -1040,
+        -496
       ],
       "id": "485547a5-2d05-41c1-85ae-e1a61e582dfe",
       "name": "Edit Fields"
@@ -627,8 +627,8 @@
       "type": "n8n-nodes-base.sort",
       "typeVersion": 1,
       "position": [
-        -1216,
-        544
+        -1264,
+        400
       ],
       "id": "dcabf2de-95d3-4cfc-be02-9772aa64fb46",
       "name": "Sort createdAt desc1"
@@ -655,8 +655,8 @@
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1.1,
       "position": [
-        -1440,
-        544
+        -1488,
+        400
       ],
       "id": "30a44f5c-1c7e-4b7a-9e7c-36d4dcc5819c",
       "name": "get_rows1"
@@ -666,8 +666,8 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        -992,
-        544
+        -1040,
+        400
       ],
       "id": "14267d88-6f09-4fdc-8d1f-fa98a7d638dd",
       "name": "Select earliest entry1"
@@ -690,8 +690,8 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.4,
       "position": [
-        -544,
-        -336
+        -592,
+        -496
       ],
       "id": "363e5725-e723-4121-82fc-a1dafc03754e",
       "name": "Update a message",
@@ -717,8 +717,8 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.4,
       "position": [
-        128,
-        544
+        80,
+        400
       ],
       "id": "3ee7eb1c-dc1c-497f-a4a0-6afd3a33ba20",
       "name": "Update Slack message",
@@ -747,40 +747,42 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3,
       "position": [
-        -1664,
-        -560
+        -1712,
+        -912
       ],
       "id": "bcc52844-5e45-46d1-a384-384dfc55c452",
       "name": "Reminder trigger"
-    },
-    {
-      "parameters": {},
-      "type": "n8n-nodes-base.limit",
-      "typeVersion": 1,
-      "position": [
-        -544,
-        -736
-      ],
-      "id": "5dab4e9b-0241-4a65-b70b-655d62d5d724",
-      "name": "Select earliest entry2"
     },
     {
       "parameters": {
         "operation": "get",
         "dataTableId": {
           "__rl": true,
-          "value": "CHXaFl7Pv82RthV4",
+          "value": "NNlMwdCabs22Qj0T",
           "mode": "list",
-          "cachedResultName": "project_status_project_owners",
-          "cachedResultUrl": "/projects/dAHyp2o5R1jdG6yX/datatables/CHXaFl7Pv82RthV4"
+          "cachedResultName": "project_status_slack",
+          "cachedResultUrl": "/projects/dAHyp2o5R1jdG6yX/datatables/NNlMwdCabs22Qj0T"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "kw",
+              "keyValue": "={{ $json.kw }}"
+            },
+            {
+              "keyName": "year",
+              "keyValue": "={{ $json.year }}"
+            }
+          ]
         },
         "limit": 20
       },
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1.1,
       "position": [
-        -1440,
-        -656
+        -1152,
+        -768
       ],
       "id": "8ad92a50-8b12-43d6-8ddc-644decb2ce47",
       "name": "Get project list"
@@ -792,52 +794,12 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        -992,
-        -656
+        -816,
+        -768
       ],
       "id": "e241fe91-e74f-45fd-a82b-ee9e762edb83",
-      "name": "Loop Over Items"
-    },
-    {
-      "parameters": {
-        "jsCode": "const items = $input.all();\n\nconst grouped = {};\n\n\n\nfor (const item of items) {\n  const project = item.json.project_name;\n  const id = item.json.project_id;\n  const owner = item.json.project_owner;\n  const slackId = item.json.project_owner_slack_id;\n\n  // Format the owner (e.g., \"Andreas\" or \"@Andreas\" if you use Slack IDs)\n  const ownerDisplay = slackId ? `<@${slackId}>` : owner;\n  if (!grouped[project]) {\n\n    grouped[project] = {\n\n      project_name: project,\n      project_id: id,\n      owners: [ownerDisplay]\n\n    };\n\n  } else {\n\n    grouped[project].owners.push(ownerDisplay);\n\n  }\n\n}\n\n\n\n// Convert the object back into an array n8n can loop through\n\nreturn Object.values(grouped).map(group => ({\n\n  json: {\n\n    project_name: group.project_name,\n    project_id: group.project_id,\n    combined_owners: group.owners.join(\", \") // Creates \"Ellen, Ben\"\n\n  }\n\n}));"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        -1216,
-        -656
-      ],
-      "id": "193336d0-6a38-49b2-91c1-6c4c2b57de82",
-      "name": "Create project list"
-    },
-    {
-      "parameters": {
-        "operation": "get",
-        "dataTableId": {
-          "__rl": true,
-          "value": "swj7LKIJWI42CJSM",
-          "mode": "list",
-          "cachedResultName": "project_status_overview",
-          "cachedResultUrl": "/projects/dAHyp2o5R1jdG6yX/datatables/swj7LKIJWI42CJSM"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyName": "project_id",
-              "keyValue": "={{ $json.project_id }}"
-            }
-          ]
-        }
-      },
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1.1,
-      "position": [
-        -768,
-        -736
-      ],
-      "id": "8582537b-343f-4d08-af4e-60a74fdb99fc",
-      "name": "Get status reports"
+      "name": "Loop Over Items",
+      "onError": "continueRegularOutput"
     },
     {
       "parameters": {
@@ -853,8 +815,8 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.4,
       "position": [
-        -320,
-        -736
+        80,
+        -1024
       ],
       "id": "748d65ba-506c-481b-a35b-e7ac39868f79",
       "name": "Get reaction",
@@ -873,8 +835,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -96,
-        -736
+        304,
+        -960
       ],
       "id": "d8fc44b2-31da-43c7-a280-6f09508e2585",
       "name": "Check for checkmark"
@@ -907,8 +869,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        128,
-        -736
+        528,
+        -880
       ],
       "id": "4d583df4-9d9b-4873-b2f3-15cc8d5b83e6",
       "name": "If message has checkmark"
@@ -925,7 +887,7 @@
         "otherOptions": {
           "thread_ts": {
             "replyValues": {
-              "thread_ts": "=1771408164.367499"
+              "thread_ts": "={{ $('Loop Over Items').item.json.slack_ts }}"
             }
           }
         }
@@ -933,8 +895,8 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.4,
       "position": [
-        352,
-        -656
+        752,
+        -816
       ],
       "id": "4f562854-bf65-4a77-acf9-397df250fef2",
       "name": "Send reminder",
@@ -948,16 +910,175 @@
     },
     {
       "parameters": {
-        "content": "Add error handling in case of empty ts"
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "4087cb58-57f6-4ffb-84be-e6052eb5ee0b",
+              "leftValue": "={{ $json.slack_ts }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -384,
+        -896
+      ],
+      "id": "782c983b-8b54-418d-8ee4-b1986da2d3e4",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "content": "Need to update by creating a data table which contains the Slack ts of the initial message\n"
       },
       "type": "n8n-nodes-base.stickyNote",
       "position": [
-        -400,
-        -848
+        -832,
+        -624
       ],
       "typeVersion": 1,
-      "id": "04f27dae-5c12-435a-a056-c75b72280b21",
+      "id": "8b7ea848-ee32-4f1a-9263-13db377b2988",
       "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "NNlMwdCabs22Qj0T",
+          "mode": "list",
+          "cachedResultName": "project_status_slack",
+          "cachedResultUrl": "/projects/dAHyp2o5R1jdG6yX/datatables/NNlMwdCabs22Qj0T"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "kw": "={{ $('Edit Fields').item.json.current_kw }}",
+            "year": "={{ $('Edit Fields').item.json.year }}",
+            "slack_ts": "={{ $('request for status message').item.json.message_timestamp }}",
+            "project_id": "={{ $('Code in JavaScript').item.json.project_name }}",
+            "combined_owners": "={{ $('Code in JavaScript').item.json.combined_owners }}",
+            "project_name": "={{ $('Code in JavaScript').item.json.project_name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "slack_ts",
+              "displayName": "slack_ts",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "project_id",
+              "displayName": "project_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "kw",
+              "displayName": "kw",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "year",
+              "displayName": "year",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "combined_owners",
+              "displayName": "combined_owners",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "project_name",
+              "displayName": "project_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -368,
+        -496
+      ],
+      "id": "b883b35b-cde7-4b89-9bb8-b1f1b7213870",
+      "name": "Insert row1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9737e0fc-e917-4ad7-8cc3-eb3209a6ba0c",
+              "name": "=kw",
+              "value": "={{ $now.toFormat('WW') }}",
+              "type": "string"
+            },
+            {
+              "id": "897f1531-f6a6-4a7e-b30b-8c7a09536072",
+              "name": "year",
+              "value": "={{ $now.toFormat('yyyy') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1488,
+        -768
+      ],
+      "id": "e5f72c1a-6c85-4104-a326-0515896481c5",
+      "name": "get_current_date"
     }
   ],
   "pinData": {},
@@ -977,7 +1098,7 @@
       "main": [
         [
           {
-            "node": "Get project list",
+            "node": "get_current_date",
             "type": "main",
             "index": 0
           }
@@ -1252,7 +1373,7 @@
       "main": [
         [
           {
-            "node": "Get project list",
+            "node": "get_current_date",
             "type": "main",
             "index": 0
           }
@@ -1263,7 +1384,7 @@
       "main": [
         [
           {
-            "node": "Create project list",
+            "node": "Loop Over Items",
             "type": "main",
             "index": 0
           }
@@ -1275,40 +1396,7 @@
         [],
         [
           {
-            "node": "Get status reports",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Select earliest entry2": {
-      "main": [
-        [
-          {
-            "node": "Get reaction",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Create project list": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Items",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Get status reports": {
-      "main": [
-        [
-          {
-            "node": "Select earliest entry2",
+            "node": "If",
             "type": "main",
             "index": 0
           }
@@ -1339,7 +1427,13 @@
     },
     "If message has checkmark": {
       "main": [
-        [],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [
           {
             "node": "Send reminder",
@@ -1359,6 +1453,46 @@
           }
         ]
       ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Get reaction",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Check for checkmark",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a message": {
+      "main": [
+        [
+          {
+            "node": "Insert row1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_current_date": {
+      "main": [
+        [
+          {
+            "node": "Get project list",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
@@ -1366,7 +1500,7 @@
     "executionOrder": "v1",
     "availableInMCP": true
   },
-  "versionId": "7a4b20c2-fe1e-4cc0-af7b-3ae1f93de30b",
+  "versionId": "5d9a2d05-0307-4ee5-a09c-e4c1eb178137",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "58bc80b014303e07f209f1f5092cd304e8b2f3edba5fbc1cb7f21a27b4c47b4d"
