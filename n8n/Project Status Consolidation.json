@@ -64,6 +64,24 @@
     },
     {
       "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "CHXaFl7Pv82RthV4",
+          "mode": "list",
+          "cachedResultName": "project_status_project_owners",
+          "cachedResultUrl": "/projects/dAHyp2o5R1jdG6yX/datatables/CHXaFl7Pv82RthV4"
+        },
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [440, 200],
+      "id": "cons-dt-010",
+      "name": "Get project owners"
+    },
+    {
+      "parameters": {
         "jsCode": "const items = $input.all();\nconst setNode = $('Current KW and Year').first().json;\nconst currentKw = String(setNode.current_kw ?? '').trim();\nconst year = String(setNode.year ?? '').trim();\n\n// Normalize for comparison (DataTable may return kw/year as number or string, e.g. 8 vs \"08\")\nconst normKw = (v) => String(v ?? '').replace(/^0+/, '') || '0';\nconst normYear = (v) => String(v ?? '').trim();\n\n// Filter by current KW and year\nlet rows = items\n  .filter(item => normKw(item.json.kw) === normKw(currentKw) && normYear(item.json.year) === normYear(year))\n  .map(item => item.json);\n\nif (rows.length === 0) {\n  return [{ json: { _skip: true, current_kw: currentKw, year, reason: 'No entries for this week' } }];\n}\n\n// Dedupe by project_id: keep newest by createdAt\nconst byProject = {};\nfor (const row of rows) {\n  const id = row.project_id;\n  const existing = byProject[id];\n  if (!existing || new Date(row.createdAt) > new Date(existing.createdAt)) {\n    byProject[id] = row;\n  }\n}\n\nconst distinct = Object.values(byProject).map(row => ({\n  json: {\n    document_id: row.document_id,\n    project_name: row.project_name || 'Unknown Project',\n    project_owner: row.project_owner || '',\n    project_id: row.project_id,\n    current_kw: currentKw,\n    year\n  }\n}));\n\nreturn distinct;"
       },
       "type": "n8n-nodes-base.code",
@@ -71,6 +89,16 @@
       "position": [660, 0],
       "id": "cons-code-004",
       "name": "Filter and dedupe by project"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst ownersRows = ($('Get project owners').all() || []).map(i => i.json);\nconst byProjectId = {};\nfor (const row of ownersRows) {\n  const id = row.project_id;\n  if (!byProjectId[id]) byProjectId[id] = [];\n  const name = (row.project_owner || '').trim();\n  if (name && !byProjectId[id].includes(name)) byProjectId[id].push(name);\n}\nconst out = items.map(item => {\n  const j = { ...item.json };\n  if (j._skip) {\n    j.project_owner_display = '';\n    return { json: j };\n  }\n  const names = byProjectId[j.project_id] || [];\n  j.project_owner_display = names.length ? ' ' + names.map(n => '@' + n).join(' ') : '';\n  return { json: j };\n});\nreturn out;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [770, 0],
+      "id": "cons-code-011",
+      "name": "Enrich with PO names"
     },
     {
       "parameters": {
@@ -121,7 +149,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Input: items from \"Get document\" (one per project). Google Docs node replaces item json, so we lose project_name.\n// Project metadata comes from \"Filter and dedupe by project\" – same order, so we match by index.\nconst docItems = $input.all();\nif (docItems.length === 0) {\n  return [{ json: { markdown: '', current_kw: '', year: '', _empty: true } }];\n}\n\nconst projects = $('Filter and dedupe by project').all().map(i => i.json);\nif (projects.length !== docItems.length) {\n  return [{ json: { markdown: '', current_kw: '', year: '', _empty: true } }];\n}\n\nconst firstProject = projects[0];\nconst currentKw = firstProject.current_kw || '';\nconst year = firstProject.year || '';\n\n// Week date range for title (e.g. 16 February – 22 February)\nconst now = new Date();\nconst startOfWeek = new Date(now);\nconst day = startOfWeek.getDay();\nconst diff = (day === 0 ? -6 : 1) - day;\nstartOfWeek.setDate(startOfWeek.getDate() + diff);\nconst endOfWeek = new Date(startOfWeek);\nendOfWeek.setDate(endOfWeek.getDate() + 6);\nconst fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });\nconst weekRange = `${fmt(startOfWeek)} – ${fmt(endOfWeek)}`;\n\nconst lines = [];\nlines.push(`# Week ${currentKw} of ${year} (${weekRange})`);\nlines.push('');\n\nfor (let i = 0; i < docItems.length; i++) {\n  const meta = projects[i];\n  const doc = docItems[i].json;\n  const projectName = meta.project_name || 'Unknown Project';\n  const projectOwner = meta.project_owner ? ` ${meta.project_owner}` : '';\n  lines.push(`## ${projectName}${projectOwner}`);\n  lines.push('');\n  const content = doc.content ?? doc.body ?? doc.text ?? doc.data ?? doc.value ?? '';\n  if (typeof content === 'string') {\n    lines.push(content.trim());\n  } else if (content && typeof content === 'object') {\n    lines.push(JSON.stringify(content));\n  }\n  lines.push('');\n  lines.push('---');\n  lines.push('');\n}\n\nconst markdown = lines.join('\\n');\nreturn [{ json: { markdown, current_kw: currentKw, year, _empty: false } }];"
+        "jsCode": "// Input: items from \"Get document\" (one per project). Google Docs node replaces item json.\n// Project metadata (with PO names) comes from \"Enrich with PO names\" – same order.\nconst docItems = $input.all();\nif (docItems.length === 0) {\n  return [{ json: { markdown: '', current_kw: '', year: '', _empty: true } }];\n}\n\nconst projects = ($('Enrich with PO names').all() || []).map(i => i.json).filter(p => !p._skip);\nif (projects.length !== docItems.length) {\n  return [{ json: { markdown: '', current_kw: '', year: '', _empty: true } }];\n}\n\nconst firstProject = projects[0];\nconst currentKw = firstProject.current_kw || '';\nconst year = firstProject.year || '';\n\n// Week date range for title (e.g. 16 February – 22 February)\nconst now = new Date();\nconst startOfWeek = new Date(now);\nconst day = startOfWeek.getDay();\nconst diff = (day === 0 ? -6 : 1) - day;\nstartOfWeek.setDate(startOfWeek.getDate() + diff);\nconst endOfWeek = new Date(startOfWeek);\nendOfWeek.setDate(endOfWeek.getDate() + 6);\nconst fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });\nconst weekRange = `${fmt(startOfWeek)} – ${fmt(endOfWeek)}`;\n\nconst lines = [];\nlines.push(`# Week ${currentKw} of ${year} (${weekRange})`);\nlines.push('');\n\nfor (let i = 0; i < docItems.length; i++) {\n  const meta = projects[i];\n  const doc = docItems[i].json;\n  const projectName = meta.project_name || 'Unknown Project';\n  const poDisplay = (meta.project_owner_display || '').trim();\n  lines.push(`## ${projectName}${poDisplay ? ' ' + poDisplay : ''}`);\n  lines.push('');\n  const content = doc.content ?? doc.body ?? doc.text ?? doc.data ?? doc.value ?? '';\n  if (typeof content === 'string') {\n    lines.push(content.trim());\n  } else if (content && typeof content === 'object') {\n    lines.push(JSON.stringify(content));\n  }\n  lines.push('');\n  lines.push('---');\n  lines.push('');\n}\n\n// Projects without status this week: all from project_owners minus those with a report (from Enrich)\nconst haveReportIds = new Set(projects.map(p => p.project_id));\nconst ownersRows = ($('Get project owners').all() || []).map(i => i.json);\nconst byProjectId = {};\nfor (const row of ownersRows) {\n  const id = row.project_id;\n  if (!byProjectId[id]) byProjectId[id] = { project_name: row.project_name || 'Unknown Project', names: [] };\n  const name = (row.project_owner || '').trim();\n  if (name && !byProjectId[id].names.includes(name)) byProjectId[id].names.push(name);\n}\nconst noReportItems = [];\nfor (const [project_id, data] of Object.entries(byProjectId)) {\n  if (haveReportIds.has(project_id)) continue;\n  const project_owner_display = data.names.length ? ' ' + data.names.map(n => '@' + n).join(' ') : '';\n  noReportItems.push({ project_name: data.project_name, project_owner_display });\n}\nif (noReportItems.length > 0) {\n  lines.push('### ❌ **No updates**');\n  lines.push('');\n  for (const p of noReportItems) {\n    const name = p.project_name || 'Unknown Project';\n    const poDisplay = (p.project_owner_display || '').trim();\n    lines.push(`- ${name}${poDisplay ? poDisplay : ''}`);\n  }\n  lines.push('');\n}\n\nconst markdown = lines.join('\\n');\nreturn [{ json: { markdown, current_kw: currentKw, year, _empty: false } }];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -184,16 +212,22 @@
     }
   ],
   "connections": {
-    "Weekly Thursday 08:00": {
+    "Weekly Tuesday 12:55": {
       "main": [[{ "node": "Current KW and Year", "type": "main", "index": 0 }]]
     },
     "Current KW and Year": {
+      "main": [[{ "node": "Get project owners", "type": "main", "index": 0 }]]
+    },
+    "Get project owners": {
       "main": [[{ "node": "Get overview rows", "type": "main", "index": 0 }]]
     },
     "Get overview rows": {
       "main": [[{ "node": "Filter and dedupe by project", "type": "main", "index": 0 }]]
     },
     "Filter and dedupe by project": {
+      "main": [[{ "node": "Enrich with PO names", "type": "main", "index": 0 }]]
+    },
+    "Enrich with PO names": {
       "main": [[{ "node": "Any entries this week?", "type": "main", "index": 0 }]]
     },
     "Any entries this week?": {
