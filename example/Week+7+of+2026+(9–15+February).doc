@@ -1,0 +1,1170 @@
+Date: Tue, 17 Feb 2026 11:18:47 +0000 (UTC)
+Message-ID: <1819720578.459.1771327127182@a20d4b61fdb0>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_458_1015055489.1771327127182"
+
+------=_Part_458_1015055489.1771327127182
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Week 7 of 2026 (9=E2=80=9315 February)</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Week 7 of 2026 (9=E2=80=9315 February)</h1>
+    <div class=3D"Section1">
+        <h2 local-id=3D"1cc35c4c-7dfc-4096-80a4-7268769b9147" id=3D"Week7of=
+2026(9=E2=80=9315February)-Participants"><img class=3D"emoticon emoticon-bl=
+ue-star" data-emoji-id=3D"1f465" data-emoji-shortname=3D":busts_in_silhouet=
+te:" data-emoji-fallback=3D"\uD83D\uDC65" src=3D"f89732f984b5c484746b812542=
+1059d7376df312f56162396b14a0ac83c30555" width=3D"16" height=3D"16" data-emo=
+ticon-name=3D"blue-star" alt=3D"(blauer Stern)">&nbsp;Participants</h2>
+<p local-id=3D"0ed97fa5-80d4-4a51-9329-0e5e953c8380"></p>
+<ul local-id=3D"862c1e44-930b-41ec-8806-f0ef0c540480">
+<li local-id=3D"88fee1b6-b594-46f6-971d-d5c0a6c3e32d">
+<p local-id=3D"b813b76f-713b-42ac-9eb3-b8cfcaa0046c"><a class=3D"confluence=
+-userlink user-mention" data-account-id=3D"5e25637f0fa3a90c9eb5e63f" href=
+=3D"https://verkstedt.atlassian.net/wiki/people/5e25637f0fa3a90c9eb5e63f?re=
+f=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"163843" data-l=
+inked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-ba=
+se-url=3D"https://verkstedt.atlassian.net/wiki">Georgios Giannoutsos Barkas=
+</a></p></li>
+</ul>
+<p local-id=3D"c56a1ee0-d95f-4180-8a36-55d7b796ac24"><strong>Table of Conte=
+nts </strong></p>
+<style type=3D"text/css">/*<![CDATA[*/
+div.rbtoc1771327127126 {padding: 0px;}
+div.rbtoc1771327127126 ul {list-style: decimal;margin-left: 0px;}
+div.rbtoc1771327127126 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style>
+<div class=3D"toc-macro rbtoc1771327127126">
+<ul class=3D"toc-indentation">
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-Participants">\uD83D\uDC6=
+5 Participants</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-Upcomingevents">Upcoming =
+events</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-Absencesinthenext2weeks">=
+Absences in the next 2 weeks</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-ImportantTI-changes">Impo=
+rtant TI-changes</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-Nextprojectsnapshot">Next=
+ project snapshot</a></li>
+</ul></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-Projects">Projects</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=A4=91RetailMedia">=
+=F0=9F=A4=91 Retail Media Victor Semencenco</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=A7=BETITestdatapla=
+tform">=F0=9F=A7=BE TI Test data platform Zina Ghannadan</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=AA=AALink4HealthCa=
+rdlink">=F0=9F=AA=AA Link4Health Cardlink Max Seeger</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=A4=96SAEConversati=
+onal">=F0=9F=A4=96 SAE Conversational Ben Otzisk</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=95=B8=EF=B8=8FScra=
+ping">=F0=9F=95=B8=EF=B8=8F Scraping Frank Lymann</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=8E=BDRDCCardlinkBo=
+ost">=F0=9F=8E=BD RDC Cardlink Boost Max Seeger</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=93=A8easyTIhub">=
+=F0=9F=93=A8 easyTI hub Vincent Lammers Max Seeger</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=AA=AAePAbroker">=
+=F0=9F=AA=AA ePA broker Alexander Thomas Vincent Lammers Zina Ghannadan</a>=
+</li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=8E=9F=EF=B8=8FTI-H=
+ubDMEADemonstrator">=F0=9F=8E=9F=EF=B8=8F TI-Hub DMEA Demonstrator Frank Ly=
+mann Vincent Lammers</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=A7=BCCleansite">=
+=F0=9F=A7=BC Cleansite Frank Lymann</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=AA=AAKVNO">=F0=9F=
+=AA=AA KVNO Ellen Egyptien</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=93=8AN8N(Nathan=F0=
+=9F=99=8E=E2=80=8D=E2=99=82=EF=B8=8F)-InvoiceAutomation">=F0=9F=93=8A N8N (=
+Nathan =F0=9F=99=8E=E2=80=8D=E2=99=82=EF=B8=8F) - Invoice Automation Ellen =
+Egyptien</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-InfinityGateDashboard">In=
+finity Gate Dashboard Ben Otzisk Ellen Egyptien</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=95=B5=EF=B8=8FISO-=
+certification">=F0=9F=95=B5=EF=B8=8F ISO-certification Ellen Egyptien</a></=
+li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-AutomatisationProjectstat=
+us">Automatisation Projectstatus Ellen Egyptien</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-BillFlow">Bill Flow Georg=
+ios Giannoutsos Barkas</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=F0=9F=92=84TI-Designsyst=
+em">=F0=9F=92=84 TI-Designsystem Vincent Lammers</a></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-=E2=9D=8CNoupdates">=E2=
+=9D=8C No updates</a></li>
+</ul></li>
+<li><a href=3D"#Week7of2026(9=E2=80=9315February)-PeopleandProjects">People=
+ and Projects Georgios Giannoutsos Barkas</a></li>
+</ul>
+</div>
+<h2 local-id=3D"6fa176d4-b8a9-48e1-bf09-8e7d591b19c7" id=3D"Week7of2026(9=
+=E2=80=9315February)-Upcomingevents">Upcoming events</h2>
+<ul local-id=3D"31ea98d8-af11-418b-8ff6-ae1dd1223380">
+<li local-id=3D"3b05d76a-d764-4ee2-9ac4-a4a4ec5b4161">
+<p local-id=3D"89cfa0d6-d4c2-4338-a797-26b8ed01da45">=E2=80=A6</p></li>
+</ul>
+<h3 local-id=3D"694fc97c-3129-4811-90dc-fe9feccf90f3" id=3D"Week7of2026(9=
+=E2=80=9315February)-Absencesinthenext2weeks">Absences in the next 2 weeks<=
+/h3>
+<ul local-id=3D"dbd6b26a-0a0e-4c70-96cf-57976fe97ef8">
+<li local-id=3D"2f01eda2-777e-4309-a451-d593a086aa5c">
+<p local-id=3D"9e48584d-bbe4-47d6-b7f8-fdedf1abd627">=E2=80=A6</p></li>
+</ul>
+<h3 local-id=3D"f87d793b-f94d-4a4c-8bef-c2663843af17" id=3D"Week7of2026(9=
+=E2=80=9315February)-ImportantTI-changes">Important TI-changes</h3>
+<ul local-id=3D"97f78982-1447-4de1-abd8-74fafabeed0a">
+<li local-id=3D"93141d3e-11e4-4707-86dc-b4e672c0d730">
+<p local-id=3D"2b34f5a0-fdc6-4c49-a6cb-9d352305f431">Draft for TIM headless=
+ client is available !! <a class=3D"external-link" data-card-appearance=3D"=
+inline" href=3D"https://gemspec.gematik.de/prereleases/Draft_gemF_TI-M_Head=
+less_Client/" local-id=3D"106b41c5a0a1" rel=3D"nofollow">https://gemspec.ge=
+matik.de/prereleases/Draft_gemF_TI-M_Headless_Client/</a> <a class=3D"exter=
+nal-link" href=3D"https://github.com/gemSpecComment/Draft_gemF_TI-M_Headles=
+s_Client/issues" rel=3D"nofollow">https://github.com/gemSpecComment/Draft_g=
+emF_TI-M_Headless_Client/issues</a></p></li>
+<li local-id=3D"744c48d03b08">
+<p local-id=3D"6cc37f8dff5f">POPP V1 Specs become approved end of this week=
+</p></li>
+</ul>
+<h3 local-id=3D"f6834a0f-c94e-4a7c-b6d2-7c51d3649f26" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextprojectsnapshot">Next project snapshot</h3>
+<ul local-id=3D"7f197cd7-5fd4-4497-a97b-d77b284d22c8">
+<li local-id=3D"d1e108dc-fc06-45e0-a2a9-15680b8a4a34">
+<p local-id=3D"50f4f92ac990"><time datetime=3D"2026-02-12" class=3D"date-pa=
+st">12.02.2026</time> Midwifes Dummy / Project (<a class=3D"confluence-user=
+link user-mention" data-account-id=3D"712020:1e5cfa2c-91c6-4fd3-a4c7-b032e8=
+b39597" href=3D"https://verkstedt.atlassian.net/wiki/people/712020:1e5cfa2c=
+-91c6-4fd3-a4c7-b032e8b39597?ref=3Dconfluence" target=3D"_blank" data-linke=
+d-resource-id=3D"1395523597" data-linked-resource-version=3D"1" data-linked=
+-resource-type=3D"userinfo" data-base-url=3D"https://verkstedt.atlassian.ne=
+t/wiki">Ellen Egyptien</a> &amp; <a class=3D"confluence-userlink user-menti=
+on" data-account-id=3D"5f2bf5768b83b700298ac087" href=3D"https://verkstedt.=
+atlassian.net/wiki/people/5f2bf5768b83b700298ac087?ref=3Dconfluence" target=
+=3D"_blank" data-linked-resource-id=3D"169148418" data-linked-resource-vers=
+ion=3D"1" data-linked-resource-type=3D"userinfo" data-base-url=3D"https://v=
+erkstedt.atlassian.net/wiki">Frank Lymann</a> )</p></li>
+<li local-id=3D"53ecaf942324">
+<p local-id=3D"ebb361c06df1"><time datetime=3D"2026-02-19" class=3D"date-up=
+coming">19.02.2026</time> Present thevea KIM integration on Thevea software=
+ UI. (<a class=3D"confluence-userlink user-mention" data-account-id=3D"5f7a=
+0f028d88b3007518b92b" href=3D"https://verkstedt.atlassian.net/wiki/people/5=
+f7a0f028d88b3007518b92b?ref=3Dconfluence" target=3D"_blank" data-linked-res=
+ource-id=3D"343572482" data-linked-resource-version=3D"1" data-linked-resou=
+rce-type=3D"userinfo" data-base-url=3D"https://verkstedt.atlassian.net/wiki=
+">Vincent Lammers</a> )</p></li>
+</ul>
+<hr local-id=3D"f0fc22f4-19fa-4954-a1af-bea406fff50c">
+<h2 local-id=3D"07b2e314-1ed7-473c-b49a-c5dc007ee874" id=3D"Week7of2026(9=
+=E2=80=9315February)-Projects">Projects</h2>
+<h3 local-id=3D"b4145cd7-f051-4c59-a6db-37b095ca6ccc" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=A4=91RetailMedia">=F0=9F=A4=91 Retail Media <a =
+class=3D"confluence-userlink user-mention" data-account-id=3D"712020:96eb5e=
+fc-c1dc-45a4-a1ad-0cc7cbd08c84" href=3D"https://verkstedt.atlassian.net/wik=
+i/people/712020:96eb5efc-c1dc-45a4-a1ad-0cc7cbd08c84?ref=3Dconfluence" targ=
+et=3D"_blank" data-linked-resource-id=3D"1070333953" data-linked-resource-v=
+ersion=3D"1" data-linked-resource-type=3D"userinfo" data-base-url=3D"https:=
+//verkstedt.atlassian.net/wiki">Victor Semencenco</a></h3>
+<h4 local-id=3D"6d25ef7b-28b3-467b-950f-2e79fd7e2713" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:">Current things:</h4>
+<ul local-id=3D"8c0fe119-5a1d-4d1d-b890-8ff7d8d6d439">
+<li local-id=3D"146df0f8-6622-48ef-8a23-2e53378e8075">
+<p local-id=3D"c63a009d3073">Roadmap Workshop in Cologne</p>
+<ul local-id=3D"680afd831729">
+<li local-id=3D"ddfb55b69e71">
+<p local-id=3D"7bd7ddd4f8a4">Me and <a class=3D"confluence-userlink user-me=
+ntion" data-account-id=3D"5f2bf5768b83b700298ac087" href=3D"https://verkste=
+dt.atlassian.net/wiki/people/5f2bf5768b83b700298ac087?ref=3Dconfluence" tar=
+get=3D"_blank" data-linked-resource-id=3D"169148418" data-linked-resource-v=
+ersion=3D"1" data-linked-resource-type=3D"userinfo" data-base-url=3D"https:=
+//verkstedt.atlassian.net/wiki">Frank Lymann</a> met the RM team in person<=
+/p></li>
+<li local-id=3D"862dbeaf781d">
+<p local-id=3D"799b4d2469b1">We reprioritized and estimated the topics for =
+Q1 &amp; Q2 2026</p></li>
+<li local-id=3D"e60dec4e530d">
+<p local-id=3D"50e2cd4e2f40">We discussed some other topics such as perform=
+ance &amp; stability of Self Service and Redcare website</p></li>
+<li local-id=3D"a19f3dd23f12">
+<p local-id=3D"a2af8186f0e1"><a class=3D"confluence-userlink user-mention" =
+data-account-id=3D"712020:96eb5efc-c1dc-45a4-a1ad-0cc7cbd08c84" href=3D"htt=
+ps://verkstedt.atlassian.net/wiki/people/712020:96eb5efc-c1dc-45a4-a1ad-0cc=
+7cbd08c84?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"10=
+70333953" data-linked-resource-version=3D"1" data-linked-resource-type=3D"u=
+serinfo" data-base-url=3D"https://verkstedt.atlassian.net/wiki">Victor Seme=
+ncenco</a> will have a series of onboarding meetings with Valerie (RM PO) a=
+nd Stephen (Martech Director)</p></li>
+</ul></li>
+<li local-id=3D"407fa6454fed">
+<p local-id=3D"7b2a5f1d10b0">Ongoing Roadmap Topics:</p>
+<ul local-id=3D"bb2b36ec-b543-4b4b-8d5b-3659a9ee6515">
+<li local-id=3D"f2185e60-9b63-4f13-8172-80111490fa79">
+<p local-id=3D"7d11e437bdc8">Bulk Edit for internal users</p>
+<ul local-id=3D"262bbaac-ca65-4b0e-9a47-85640677f48f">
+<li local-id=3D"39a9ec38-d050-4db9-a176-f7ce272c4499">
+<p local-id=3D"469fb929efdc">Main functionality in PROD under feature toggl=
+e. Still some fixes left.</p></li>
+</ul></li>
+<li local-id=3D"bfe0a084-b71e-4620-992b-18444589d11f">
+<p local-id=3D"e534070ab460">Notification System (external users)</p>
+<ul local-id=3D"6e35ddc2-d9c2-492f-b0a5-d17be366e194">
+<li local-id=3D"cdcac4f5-cbf8-4d5c-8d6a-2a2a38812107">
+<p local-id=3D"d259f8445f0e">Main functionality in PROD under feature toggl=
+e.</p></li>
+</ul></li>
+<li local-id=3D"25ae0b37-fb45-441f-9120-cbddc6e3ab9f">
+<p local-id=3D"7a3598d5eaf6">Budget Improvements</p>
+<ul local-id=3D"d214f00b-281b-4b4f-b591-bcec6c68a173">
+<li local-id=3D"abc0c9c0-06ea-4cb2-bac9-bd2df8e23bfe">
+<p local-id=3D"daee6a3f355b">Passed some initial ideas to RM team. They nee=
+d to decide which improvements to implement.</p></li>
+</ul></li>
+<li local-id=3D"4e0c12e4-d9e0-4f92-a61a-18132c804ff2">
+<p local-id=3D"fcff7d4270d6">GK Air Migration (80% done)</p>
+<ul local-id=3D"949dd11ef275">
+<li local-id=3D"df03a9d74af7">
+<p local-id=3D"33fa1d47898f">Still some business discussion going on but ou=
+r implementation is mainly done</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 local-id=3D"443d2f2d-d0f0-405c-9497-09ac6264d5ec" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:">Next steps:</h4>
+<ul local-id=3D"c1a7c1c9-f692-4a1f-87ca-8e790e95f5a2">
+<li local-id=3D"f7a747f7-5b84-4b78-90e9-6094645ca07b">
+<p local-id=3D"2c7f3762f149">Skyscrapers in Belgium</p>
+<ul local-id=3D"b0344014048b">
+<li local-id=3D"23ef651f8bde">
+<p local-id=3D"234f5ad33a97">RM team needs to provide us info such as dimen=
+sions, responsiveness, campaign types, etc.</p></li>
+</ul></li>
+<li local-id=3D"67df1013b156">
+<p local-id=3D"acb29f0859b0">Notification for Internal users</p></li>
+<li local-id=3D"779b54d2d3de">
+<p local-id=3D"ab656355a45d">App Slider Integration</p>
+<ul local-id=3D"3c8945db6e35">
+<li local-id=3D"f04e19d50fad">
+<p local-id=3D"60b1d4d2cc72">Migration from Leanplum to Adserver for the ap=
+p=E2=80=99s homepage sliders</p></li>
+<li local-id=3D"e725a81e7db9">
+<p local-id=3D"033a4a96eb56">One of the topics that were re-prioritized at =
+the workshop in COL</p></li>
+<li local-id=3D"c34acd9b2648">
+<p local-id=3D"66a26f38d667">App team needs to do the migration, we need to=
+ do some small adjustments (new campaign, new adslot, etc)</p></li>
+</ul></li>
+<li local-id=3D"0f2e2224831c">
+<p local-id=3D"d6f0c37b55d5">User Management (internal users)</p>
+<ul local-id=3D"c11c2998-5778-4b88-a901-5fc660b03533">
+<li local-id=3D"f5abf09b-233a-4e66-8a62-0eb166d248be">
+<p local-id=3D"fe398ce6af25">Session with Frank required</p></li>
+</ul></li>
+<li local-id=3D"c43aa2ef-0237-4fb8-abc7-4608b9b849ec">
+<p local-id=3D"903dc4e9acae">Wallet Service</p>
+<ul local-id=3D"866db59a-dd27-4192-9ae3-141f06e2bdc7">
+<li local-id=3D"07e03450-e89d-499a-941b-0384fb0ba365">
+<p local-id=3D"d29dc59d4d5c">Blocked - Waiting for Danilo to finish develop=
+ment on his side for handling the VAT and MandantID.</p></li>
+</ul></li>
+</ul>
+<h4 local-id=3D"767cce91-94f6-4ee0-8a89-01782869b820" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:">Help and refinement s=
+upport needed:</h4>
+<h3 local-id=3D"d46c336a-7eaa-4e40-9014-9c6643fb6503" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=A7=BETITestdataplatform">=F0=9F=A7=BE TI Test d=
+ata platform <a class=3D"confluence-userlink user-mention" data-account-id=
+=3D"712020:a373528b-4b77-4f84-87af-5ea619dc59a3" href=3D"https://verkstedt.=
+atlassian.net/wiki/people/712020:a373528b-4b77-4f84-87af-5ea619dc59a3?ref=
+=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"1145995274" dat=
+a-linked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data=
+-base-url=3D"https://verkstedt.atlassian.net/wiki">Zina Ghannadan</a></h3>
+<h4 local-id=3D"24980bc4-b2be-4c93-83ed-13881c19dd0c" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.1">Current things:</h4>
+<ul local-id=3D"be65f73979d9">
+<li local-id=3D"6c037d45937a">
+<p local-id=3D"e336286d87fa">continuing on kim</p></li>
+<li local-id=3D"dac1489dda90">
+<p local-id=3D"4111395f3714">need kim addresses for kim beta and prod, will=
+ look into that</p></li>
+<li local-id=3D"8c9b15459c45">
+<p local-id=3D"46f5b43277ce">Erol and Zach, had some sae tasks</p></li>
+<li local-id=3D"59303555666b">
+<p local-id=3D"3a90a93ed09e">talked with Ben</p>
+<ul local-id=3D"6967d8b6b6a9">
+<li local-id=3D"45e5d75ac437">
+<p local-id=3D"b8262cdedda3">eventually needs to do a handover by zach to e=
+rol</p></li>
+<li local-id=3D"7309a7cabb16">
+<p local-id=3D"10332db7d888">erol eventually have a look into tim</p></li>
+</ul></li>
+</ul>
+<h4 local-id=3D"246af64c-4001-4466-b6e1-0e45fbc6ae2b" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.1">Next steps:</h4>
+<h4 local-id=3D"36250b11-5d7b-48d9-9772-2c9f2863b24a" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.1">Help and refinement=
+ support needed:</h4>
+<h3 local-id=3D"ea0d9021-0cf4-4bfe-b1cc-7d7d30336a47" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=AA=AALink4HealthCardlink">=F0=9F=AA=AA Link4Hea=
+lth Cardlink <a class=3D"confluence-userlink user-mention" data-account-id=
+=3D"712020:7e744887-7b29-4d18-9262-7f2382d1b14a" href=3D"https://verkstedt.=
+atlassian.net/wiki/people/712020:7e744887-7b29-4d18-9262-7f2382d1b14a?ref=
+=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"1281097738" dat=
+a-linked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data=
+-base-url=3D"https://verkstedt.atlassian.net/wiki">Max Seeger</a></h3>
+<h4 local-id=3D"76511ccb-faf4-4f2e-8189-97f5365dfb24" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.2">Current things:</h4>
+<ul local-id=3D"8738b37fbb8b">
+<li local-id=3D"3ac02802456d">
+<p local-id=3D"01046c5b4732">tested new broker metrics</p></li>
+<li local-id=3D"64095836fdc5">
+<p local-id=3D"f4ce2b297cd3">getting prescription-request api back up runni=
+ng until end of February</p></li>
+</ul>
+<h4 local-id=3D"0a83ea37-4fc0-4722-9662-79887fdd84db" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.2">Next steps:</h4>
+<ul local-id=3D"853e049ca79a">
+<li local-id=3D"2749d9f7-3129-4915-aeed-2dcc16a6a748">
+<p local-id=3D"451340145c8d">GEDISA docs</p></li>
+<li local-id=3D"eff301de908a">
+<p local-id=3D"c97ec7c7b33d">SDK refactoring + timeline update</p></li>
+<li local-id=3D"6253bee1f913">
+<p local-id=3D"0bb07f7838d3">PoPP meeting with GEDISA</p></li>
+</ul>
+<h4 local-id=3D"faca1d2e-a64d-4eda-8735-fd5715d15443" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.2">Help and refinement=
+ support needed:</h4>
+<h3 local-id=3D"ec0b38c5-c0e8-453b-a441-e4f6bcf82491" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=A4=96SAEConversational">=F0=9F=A4=96 SAE Conver=
+sational <a class=3D"confluence-userlink user-mention current-user-mention"=
+ data-account-id=3D"70121:2235fdae-40fc-4d17-8319-3b371b26cc19" href=3D"htt=
+ps://verkstedt.atlassian.net/wiki/people/70121:2235fdae-40fc-4d17-8319-3b37=
+1b26cc19?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"919=
+47010" data-linked-resource-version=3D"1" data-linked-resource-type=3D"user=
+info" data-base-url=3D"https://verkstedt.atlassian.net/wiki">Ben Otzisk</a>=
+</h3>
+<h4 local-id=3D"772a0795-ac82-44e3-852a-b21059202a38" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.3">Current things:</h4>
+<ul local-id=3D"2a52de70-07fe-4de1-88c9-8d32e1f010a4">
+<li local-id=3D"b30b3dd4-9753-486c-a34d-f9d2423d6374">
+<p local-id=3D"81e108551b50">Password reset functionality has been fixed an=
+d is already deployed to production.</p></li>
+<li local-id=3D"14181b59-70de-4282-b07a-99ae2f76c444">
+<p local-id=3D"1254fd9989fc">For the remaining Bully migration topics, we a=
+re still waiting for alignment with Team Onyx. A dedicated alignment meetin=
+g is scheduled tomorrow.</p></li>
+<li local-id=3D"dad63a97-68ea-47f4-a4b2-068e9690e0da">
+<p local-id=3D"9a5fcc01e8bd">PMO situation: the PMOs we were previously boo=
+ked against appear to be closed. I asked whether there is a new PMO to book=
+ against; instead of a direct answer, a meeting was scheduled. This meeting=
+ will take place tomorrow with Onyx.</p></li>
+<li local-id=3D"6a5d66af-6f72-4026-9a46-190d2482f792">
+<p local-id=3D"50c3976aee05">No update yet from Bennett regarding the data =
+topics; this will be raised in tomorrow=E2=80=99s meeting.</p></li>
+<li local-id=3D"cf86f32c-1f6d-4880-874a-24d5d2ba9764">
+<p local-id=3D"e1cb853aac7b">Chatbot UI inconsistencies identified (mix of =
+old Order UI and new UI within order &amp; invoice flow). This is due to pa=
+rtial migration and will also be addressed in the alignment call.</p></li>
+<li local-id=3D"18d3d8d4-a458-4a83-a408-4e54f6b94f8b">
+<p local-id=3D"357dc28bd8e7">Userlike issues:</p>
+<ul local-id=3D"3924547a-e51f-4951-b4fc-b100d55d0c25">
+<li local-id=3D"6f3c991f-23e6-4d75-874a-f9aa5da4a520">
+<p local-id=3D"beed4c923100">Erol is working on fixing runtime issues.</p><=
+/li>
+<li local-id=3D"ee0d1bfb-f365-4e11-a245-2fc353537aca">
+<p local-id=3D"81208c5671a1">Zach is fixing missing/failing Userlike Playwr=
+ight tests.</p></li>
+</ul></li>
+<li local-id=3D"ba596f13-409c-482e-a74d-4959b47cf978">
+<p local-id=3D"ee998c98155d">App Monitoring:</p>
+<ul local-id=3D"0bce708f-6413-4159-93d9-f2804d27c9dc">
+<li local-id=3D"a9fbcad5-57e3-4cdd-84eb-535599f0a81a">
+<p local-id=3D"2249f5bfa170">Several Sentry errors currently visible in the=
+ App Monitoring channel.</p></li>
+<li local-id=3D"53875689-d0ef-4090-bb6d-b531b52d3329">
+<p local-id=3D"eb5eca66c32c">Some are Userlike-related and require addition=
+al API-level logging (Erol investigating).</p></li>
+<li local-id=3D"57616ad5-603b-442d-80fa-0bfa36b5c8c4">
+<p local-id=3D"0f4db0f95c7e">Additional GCP errors are being reviewed in pa=
+rallel.</p></li>
+<li local-id=3D"2bf318e5-f529-4f02-9664-bd056b359d35">
+<p local-id=3D"b324d9d8ff57">Both streams are being worked on in a timeboxe=
+d manner; the goal is to reduce noise in the monitoring channel after recen=
+t changes (Userlike / Pusher updates).</p></li>
+</ul></li>
+</ul>
+<h4 local-id=3D"471c5109-b895-46b2-8abd-46e4487cd39f" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.3">Next steps:</h4>
+<ul local-id=3D"cae5a02e-3314-4e45-a5b2-d6876f8c0aa0">
+<li local-id=3D"7ebcad13-af1c-4404-a4a5-520740bcf1ff">
+<p local-id=3D"c3c01e7d0b93">Coordinate production deployment for the remai=
+ning Bully endpoints with Team Onyx.</p></li>
+<li local-id=3D"3f6c7bc0-e0a4-4f9b-b19b-afe940a74f52">
+<p local-id=3D"767ee11afe47">Align with RedCare on:</p>
+<ul local-id=3D"d34f186f-dc3c-47fc-974e-0c43d4578d8e">
+<li local-id=3D"64d1de17-85cb-4f78-8fe3-55ab5edf9e96">
+<p local-id=3D"8676ce02b9fc">PMO setup / booking model</p></li>
+<li local-id=3D"7296ed90-fd25-4a07-b400-9bc704e55d54">
+<p local-id=3D"2d9df8cd8f5b">Data visibility topics</p></li>
+<li local-id=3D"903ce605-6078-43af-b73e-1686eac6e22f">
+<p local-id=3D"7ad1545104da">Chatbot UI inconsistencies and migration roadm=
+ap</p></li>
+<li local-id=3D"215b49c5-a04b-4fc0-b112-214e7853da10">
+<p local-id=3D"a9a34a1b8de3">Expectations around monitoring, SLAs, and time=
+ investment for fixing third-party=E2=80=93related issues</p></li>
+</ul></li>
+<li local-id=3D"266b09de-a8f0-4a7f-8d79-0fb9d5925ccb">
+<p local-id=3D"429fb038a8b0">Review outcomes from tomorrow=E2=80=99s alignm=
+ent call and adjust priorities accordingly.</p></li>
+</ul>
+<h4 local-id=3D"182f35be-5d84-47bd-a281-ba8845672232" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.3">Help and refinement=
+ support needed:</h4>
+<ul local-id=3D"ea38ab9a307c">
+<li local-id=3D"26617843c77b">
+<p local-id=3D"048639b91e7e">Investigate Cost monitoring <a class=3D"conflu=
+ence-userlink user-mention" data-account-id=3D"5e25637f0fa3a90c9eb5e63f" hr=
+ef=3D"https://verkstedt.atlassian.net/wiki/people/5e25637f0fa3a90c9eb5e63f?=
+ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"163843" data=
+-linked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-=
+base-url=3D"https://verkstedt.atlassian.net/wiki">Georgios Giannoutsos Bark=
+as</a></p></li>
+</ul>
+<h3 local-id=3D"cae162d9-50f9-44cb-91a8-954a947cc535" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=95=B8=EF=B8=8FScraping">=F0=9F=95=B8=EF=B8=8F S=
+craping <a class=3D"confluence-userlink user-mention" data-account-id=3D"5f=
+2bf5768b83b700298ac087" href=3D"https://verkstedt.atlassian.net/wiki/people=
+/5f2bf5768b83b700298ac087?ref=3Dconfluence" target=3D"_blank" data-linked-r=
+esource-id=3D"169148418" data-linked-resource-version=3D"1" data-linked-res=
+ource-type=3D"userinfo" data-base-url=3D"https://verkstedt.atlassian.net/wi=
+ki">Frank Lymann</a></h3>
+<h4 local-id=3D"25bfcd11-1bc3-4425-9f51-abc7b5205ab9" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.4">Current things:</h4>
+<h4 local-id=3D"a1b2fd32-f4d6-43bd-8e6d-217f17dc338b" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.4">Next steps:</h4>
+<h4 local-id=3D"80c6f1d0-21de-4254-96a6-edde80c5aa8f" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.4">Help and refinement=
+ support needed:</h4>
+<h3 local-id=3D"9869b3ca-df08-4ced-9dda-8459c68cb64d" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=8E=BDRDCCardlinkBoost">=F0=9F=8E=BD RDC Cardlin=
+k Boost <a class=3D"confluence-userlink user-mention" data-account-id=3D"71=
+2020:7e744887-7b29-4d18-9262-7f2382d1b14a" href=3D"https://verkstedt.atlass=
+ian.net/wiki/people/712020:7e744887-7b29-4d18-9262-7f2382d1b14a?ref=3Dconfl=
+uence" target=3D"_blank" data-linked-resource-id=3D"1281097738" data-linked=
+-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-base-ur=
+l=3D"https://verkstedt.atlassian.net/wiki">Max Seeger</a></h3>
+<h4 local-id=3D"f09d40ca-97f2-43eb-8ff2-df5f62e28af9" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.5">Current things:</h4>
+<h4 local-id=3D"c45a15e0-2350-4dbe-b856-640cae331129" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.5">Next steps:</h4>
+<h4 local-id=3D"697ffd4d-6a53-4343-adfd-f30efe084927" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.5">Help and refinement=
+ support needed:</h4>
+<h3 local-id=3D"cd2e4380-b8bf-490a-a5ed-b0c1553521ff" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=93=A8easyTIhub">=F0=9F=93=A8 easyTI hub <a clas=
+s=3D"confluence-userlink user-mention" data-account-id=3D"5f7a0f028d88b3007=
+518b92b" href=3D"https://verkstedt.atlassian.net/wiki/people/5f7a0f028d88b3=
+007518b92b?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"3=
+43572482" data-linked-resource-version=3D"1" data-linked-resource-type=3D"u=
+serinfo" data-base-url=3D"https://verkstedt.atlassian.net/wiki">Vincent Lam=
+mers</a> <a class=3D"confluence-userlink user-mention" data-account-id=3D"7=
+12020:7e744887-7b29-4d18-9262-7f2382d1b14a" href=3D"https://verkstedt.atlas=
+sian.net/wiki/people/712020:7e744887-7b29-4d18-9262-7f2382d1b14a?ref=3Dconf=
+luence" target=3D"_blank" data-linked-resource-id=3D"1281097738" data-linke=
+d-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-base-u=
+rl=3D"https://verkstedt.atlassian.net/wiki">Max Seeger</a></h3>
+<h4 local-id=3D"749a8442-8421-465e-b714-91083dcc6388" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.6">Current things:</h4>
+<ul local-id=3D"62b894dfa894">
+<li local-id=3D"dc47e5a5c6da">
+<p local-id=3D"a4281c68b7c6">participation of verkstedt and curenect during=
+ thevea onboarding sessions</p></li>
+<li local-id=3D"5434075e564d">
+<p local-id=3D"644b107abfdc">Kickoff =C3=B6gDigital (aka Evia)</p></li>
+<li local-id=3D"5ddcffba3ee0">
+<p local-id=3D"e0f68d5e853a">preparation of PU deployment <time datetime=3D=
+"2026-02-11" class=3D"date-past">11.02.2026</time> 7:00-9:00 am</p></li>
+<li local-id=3D"c17210ea372f">
+<p local-id=3D"134f9c8be893">specification remote-PIN</p></li>
+<li local-id=3D"0f52f732eea8">
+<p local-id=3D"a44c35a7a08a">kim using virtual cards and SISI</p></li>
+<li local-id=3D"33d612ccb4a0">
+<p local-id=3D"0624e60b2f34">Development on following features ongoing:</p>
+<ul local-id=3D"52a1bc754b37">
+<li local-id=3D"84dbf5cb047b">
+<p local-id=3D"776ad4b11efd">Exposing error client relevant error cases</p>=
+</li>
+<li local-id=3D"931db0b69a64">
+<p local-id=3D"6c4ffab757b3">VPN capacity API</p></li>
+<li local-id=3D"2caa7fd80e27">
+<p local-id=3D"d2488126cc7f">GetCardTerminals API</p></li>
+<li local-id=3D"baa9e90972a6">
+<p local-id=3D"3eeaa4da37b0">GetCardCertificates API</p></li>
+</ul></li>
+<li local-id=3D"cf067075075c">
+<p local-id=3D"c4ed5de32cae">Release process optimization</p></li>
+<li local-id=3D"8cd468ecb8ae">
+<p local-id=3D"885f039aee15">Onboarding of ehex webmailer team with HSMB pl=
+anned for tomorrow</p></li>
+<li local-id=3D"6dd00f875bbd">
+<p local-id=3D"ddbe4335a0fc">Automation of basic set of regression tests on=
+going</p></li>
+<li local-id=3D"59f42f6152f6">
+<p local-id=3D"d026d88302bf">config-thing to enable curenect support: in pr=
+ogress, needs change in SSO config on ehex side</p></li>
+</ul>
+<h4 local-id=3D"11109dc9-d000-4db2-a51f-d2511e5e6813" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.6">Next steps:</h4>
+<ul local-id=3D"2ae3cf0d2aa4">
+<li local-id=3D"525ad9e6-1fff-493f-8eed-8140fcbf5f2f">
+<p local-id=3D"44303b6df40f">Migration of INT from RU Light to RU IMS</p></=
+li>
+<li local-id=3D"e3fbe6748fa1">
+<p local-id=3D"ccbc57a3567b">passed the new sso client data to ehex</p>
+<ul local-id=3D"cf6a8b834f9d">
+<li local-id=3D"4a85bebfef69">
+<p local-id=3D"45189eb5bb16">no comfirmation if they can add them before th=
+e portal restart or not</p></li>
+</ul></li>
+<li local-id=3D"987f1531-ad85-4034-a89a-7db5d8c3e71f">
+<p local-id=3D"11e159769a62">Passing the tresor recovery key needs a plan</=
+p></li>
+<li local-id=3D"7916119186d3">
+<p local-id=3D"0d78632e7d2b">Migration of virtual auto PIN entry causing te=
+sting issue for thevea</p></li>
+</ul>
+<h4 local-id=3D"b68d6d9a-ccaf-42e4-a0bf-08098dca3741" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.6">Help and refinement=
+ support needed:</h4>
+<ul local-id=3D"86e73776795f">
+<li local-id=3D"cbbb8d4c2c26">
+<p local-id=3D"b054a35b3334">Please check the tickets assigned to you on th=
+e TIH board: <a class=3D"external-link" data-card-appearance=3D"inline" hre=
+f=3D"https://easyti.atlassian.net/jira/software/projects/TIH/boards/300" lo=
+cal-id=3D"1049ed154618" rel=3D"nofollow">https://easyti.atlassian.net/jira/=
+software/projects/TIH/boards/300</a></p></li>
+</ul>
+<h4 local-id=3D"044929dc-476b-465b-9eda-0509ce5d8134" id=3D"Week7of2026(9=
+=E2=80=9315February)-Statusofpartneronboarding:">Status of partner onboardi=
+ng:</h4>
+<ul local-id=3D"09083dff8c0b">
+<li local-id=3D"6a17e29014b8">
+<p local-id=3D"47164b64ba8e">Evia: Kickoff done, Ionos-PoC ongoing</p></li>
+<li local-id=3D"71c1071a2367">
+<p local-id=3D"02fe651f952d">docDok - received an offer - WS planned</p></l=
+i>
+<li local-id=3D"b9c774adf704">
+<p local-id=3D"8ff3bd08179f">odFlow - tech call scheduled</p></li>
+<li local-id=3D"de764dbe3bac">
+<p local-id=3D"bf43eada08bb"></p></li>
+</ul>
+<h3 local-id=3D"f93aa018-0e9e-48ac-af47-8e03c5910554" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=AA=AAePAbroker">=F0=9F=AA=AA ePA broker <a clas=
+s=3D"confluence-userlink user-mention" data-account-id=3D"557058:620b1db4-a=
+92a-40df-bd5e-a1867779e3da" href=3D"https://verkstedt.atlassian.net/wiki/pe=
+ople/557058:620b1db4-a92a-40df-bd5e-a1867779e3da?ref=3Dconfluence" target=
+=3D"_blank" data-linked-resource-id=3D"131073" data-linked-resource-version=
+=3D"1" data-linked-resource-type=3D"userinfo" data-base-url=3D"https://verk=
+stedt.atlassian.net/wiki">Alexander Thomas</a> <a class=3D"confluence-userl=
+ink user-mention" data-account-id=3D"5f7a0f028d88b3007518b92b" href=3D"http=
+s://verkstedt.atlassian.net/wiki/people/5f7a0f028d88b3007518b92b?ref=3Dconf=
+luence" target=3D"_blank" data-linked-resource-id=3D"343572482" data-linked=
+-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-base-ur=
+l=3D"https://verkstedt.atlassian.net/wiki">Vincent Lammers</a> <a class=3D"=
+confluence-userlink user-mention" data-account-id=3D"712020:a373528b-4b77-4=
+f84-87af-5ea619dc59a3" href=3D"https://verkstedt.atlassian.net/wiki/people/=
+712020:a373528b-4b77-4f84-87af-5ea619dc59a3?ref=3Dconfluence" target=3D"_bl=
+ank" data-linked-resource-id=3D"1145995274" data-linked-resource-version=3D=
+"1" data-linked-resource-type=3D"userinfo" data-base-url=3D"https://verkste=
+dt.atlassian.net/wiki">Zina Ghannadan</a></h3>
+<h4 local-id=3D"ff88860d-72b6-42e5-8a95-e875d4641119" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.7">Current things:</h4>
+<ul local-id=3D"bf7293541eab">
+<li local-id=3D"193ca5bbde24">
+<p local-id=3D"a83439c950d7">CLI in Version 1.1.0</p>
+<ul local-id=3D"1a7acfaec3d1">
+<li local-id=3D"6e1f0b8bc6b1">
+<p local-id=3D"40e666a1b950">New actions "createDocuments", "deleteDocument=
+" und "editDocumentMetadata"</p></li>
+</ul></li>
+<li local-id=3D"a4d9b3b75135">
+<p local-id=3D"a53d431f8fc3">konnektor-worker interfaces to the async-api</=
+p></li>
+</ul>
+<h4 local-id=3D"d82c76f0-602a-4f4e-8899-1451e53d23ca" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.7">Next steps:</h4>
+<ul local-id=3D"429022f8d61f">
+<li local-id=3D"cf3625de-313e-4eae-b4ef-93b41b3dd3ed">
+<p local-id=3D"f4679dc3d828">Keep driving the schema + CLI alignment</p></l=
+i>
+<li local-id=3D"b5a50753-bd58-4d9d-bbe7-a1ed8765b5fa">
+<p local-id=3D"773f6557c9e4">Likely continue with the Spring-free extractio=
+n approach</p></li>
+</ul>
+<h4 local-id=3D"9fffb020-1fe6-4370-8794-d167aa6eb65c" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.7">Help and refinement=
+ support needed:</h4>
+<ul local-id=3D"c44772380476">
+<li local-id=3D"d765d8c9153b">
+<p local-id=3D"cd07837fe786">Clarify Christopher Situation =E2=80=A6</p></l=
+i>
+</ul>
+<h3 local-id=3D"612f919a-1a51-4b2c-b652-d812e3d1e96f" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=8E=9F=EF=B8=8FTI-HubDMEADemonstrator">=F0=9F=8E=
+=9F=EF=B8=8F TI-Hub DMEA Demonstrator <a class=3D"confluence-userlink user-=
+mention" data-account-id=3D"5f2bf5768b83b700298ac087" href=3D"https://verks=
+tedt.atlassian.net/wiki/people/5f2bf5768b83b700298ac087?ref=3Dconfluence" t=
+arget=3D"_blank" data-linked-resource-id=3D"169148418" data-linked-resource=
+-version=3D"1" data-linked-resource-type=3D"userinfo" data-base-url=3D"http=
+s://verkstedt.atlassian.net/wiki">Frank Lymann</a> <a class=3D"confluence-u=
+serlink user-mention" data-account-id=3D"5f7a0f028d88b3007518b92b" href=3D"=
+https://verkstedt.atlassian.net/wiki/people/5f7a0f028d88b3007518b92b?ref=3D=
+confluence" target=3D"_blank" data-linked-resource-id=3D"343572482" data-li=
+nked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-bas=
+e-url=3D"https://verkstedt.atlassian.net/wiki">Vincent Lammers</a></h3>
+<h4 local-id=3D"328d8797-66a2-4557-a239-89a61f7ce17a" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.8">Current things:</h4>
+<ul local-id=3D"59a0102032fa">
+<li local-id=3D"d246333bc34e">
+<p local-id=3D"910656d969f4">Development based on <a class=3D"external-link=
+" data-card-appearance=3D"inline" href=3D"https://github.com/verkstedt/ti-o=
+s-dev-platform/tree/main/_bmad-output" local-id=3D"d5c2a31244eb" rel=3D"nof=
+ollow">https://github.com/verkstedt/ti-os-dev-platform/tree/main/_bmad-outp=
+ut</a> started</p></li>
+</ul>
+<h4 local-id=3D"bb214c3d-1df2-45e0-b001-5b1ff9445d35" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.8">Next steps:</h4>
+<ul local-id=3D"87d2b584bfa2">
+<li local-id=3D"c133d48fea7a">
+<p local-id=3D"63e64af89fa3">Processing all epics &amp; tasks</p></li>
+</ul>
+<h4 local-id=3D"da1f0b8e-7755-42da-9c29-ef564396cdc3" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.8">Help and refinement=
+ support needed:</h4>
+<h3 local-id=3D"08dc2b42-317c-424e-a9fe-dd2c9cfe4472" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=A7=BCCleansite">=F0=9F=A7=BC Cleansite <a class=
+=3D"confluence-userlink user-mention" data-account-id=3D"5f2bf5768b83b70029=
+8ac087" href=3D"https://verkstedt.atlassian.net/wiki/people/5f2bf5768b83b70=
+0298ac087?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"16=
+9148418" data-linked-resource-version=3D"1" data-linked-resource-type=3D"us=
+erinfo" data-base-url=3D"https://verkstedt.atlassian.net/wiki">Frank Lymann=
+</a></h3>
+<h4 local-id=3D"36d303bd-cdd2-4dac-8b93-229ed886d1c7" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.9">Current things:</h4>
+<ul local-id=3D"8799907bfb6a">
+<li local-id=3D"bcc3fe9ed150">
+<p local-id=3D"3f91512dc7cd">All issues in reference were resolved</p></li>
+</ul>
+<h4 local-id=3D"e1329f99-2dbd-47c1-a512-8a2ce32e86bc" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.9">Next steps:</h4>
+<ul local-id=3D"39b26422309b">
+<li local-id=3D"e86eab03529d">
+<p local-id=3D"3701c1a34b34">Waiting for OPS doing an initial prod deployme=
+nt</p></li>
+</ul>
+<h4 local-id=3D"6050c9d8-bcb7-4b38-bf21-29f62b76b0fe" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.9">Help and refinement=
+ support needed:</h4>
+<h3 local-id=3D"427996a7-99f7-445b-b3e2-5e10c8681d7b" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=AA=AAKVNO">=F0=9F=AA=AA KVNO <a class=3D"conflu=
+ence-userlink user-mention" data-account-id=3D"712020:1e5cfa2c-91c6-4fd3-a4=
+c7-b032e8b39597" href=3D"https://verkstedt.atlassian.net/wiki/people/712020=
+:1e5cfa2c-91c6-4fd3-a4c7-b032e8b39597?ref=3Dconfluence" target=3D"_blank" d=
+ata-linked-resource-id=3D"1395523597" data-linked-resource-version=3D"1" da=
+ta-linked-resource-type=3D"userinfo" data-base-url=3D"https://verkstedt.atl=
+assian.net/wiki">Ellen Egyptien</a></h3>
+<h4 local-id=3D"48c89a96-f8bf-4dc6-a544-c8dd0ef2a3d7" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.10">Current things:</h4>
+<ul local-id=3D"dce46ce5-eef4-4fb3-be98-67b311ae98c4">
+<li local-id=3D"24db15a2-fbfa-4a31-b335-c850f8a19083">
+<p local-id=3D"e1a7b1d9c60e">The iOS app is finished and published; the fin=
+al Android build has been submitted and is currently in review (expected wi=
+thin 24=E2=80=9372 hours).</p></li>
+<li local-id=3D"e7f9a913-83ae-4b19-8fe2-46652b502709">
+<p local-id=3D"2c3f25df6289">Core test results are clear: device assignment=
+ works, the signature is technically present, but format and scaling issues=
+ (portrait vs. landscape) still need adjustment in the app and in AFV.</p><=
+/li>
+<li local-id=3D"c9c75754-b2e4-4622-94d2-9c7abf1ff110">
+<p local-id=3D"c122379492aa">We still need to provide an offer (effort esti=
+mation), including the signature adjustments and the potential phone number=
+ / SMS topic; this was explicitly reiterated in the meeting.</p></li>
+</ul>
+<h4 local-id=3D"dd210d95-589e-476c-9666-c32e5ba25bc6" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.10">Next steps:</h4>
+<ul local-id=3D"0aecf90b-96dd-4af2-afb9-377ab1fc01eb">
+<li local-id=3D"e3479b3a-328b-4fba-84e4-de5258235160">
+<p local-id=3D"3a759a575db5">Complete the Android store review and official=
+ly go live in both app stores.</p></li>
+<li local-id=3D"73376a3a-46dd-4001-a1b5-1950b5dcbb96">
+<p local-id=3D"25533be3f7f2">Implement and test the signature fixes =E2=9C=
+=85</p></li>
+<li local-id=3D"227a08d0-f27b-4f62-80d8-ceb7904c0924">
+<p local-id=3D"f584860e8649">Receive and align on our offer as the basis fo=
+r next decisions, including onboarding of the 30 friendly doctors.</p></li>
+<li local-id=3D"5767719597b6">
+<p local-id=3D"a33fd9b73d0f">Offers for extension of current app requested =
+for</p>
+<ul local-id=3D"1cc518f7ff44">
+<li local-id=3D"c6e5f679c436">
+<p local-id=3D"1fd3856ee0fa">Collection of necessary data for transmission =
+of patient information via</p></li>
+</ul></li>
+</ul>
+<h4 local-id=3D"2bd565e6-7fac-4237-9cf8-00c98652366c" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.10">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"84c13d28-1eb5-4ec7-b81c-1fd776cc7d67" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=93=8AN8N(Nathan=F0=9F=99=8E=E2=80=8D=E2=99=82=
+=EF=B8=8F)-InvoiceAutomation">=F0=9F=93=8A N8N (Nathan =F0=9F=99=8E=E2=80=
+=8D=E2=99=82=EF=B8=8F) - Invoice Automation <a class=3D"confluence-userlink=
+ user-mention" data-account-id=3D"712020:1e5cfa2c-91c6-4fd3-a4c7-b032e8b395=
+97" href=3D"https://verkstedt.atlassian.net/wiki/people/712020:1e5cfa2c-91c=
+6-4fd3-a4c7-b032e8b39597?ref=3Dconfluence" target=3D"_blank" data-linked-re=
+source-id=3D"1395523597" data-linked-resource-version=3D"1" data-linked-res=
+ource-type=3D"userinfo" data-base-url=3D"https://verkstedt.atlassian.net/wi=
+ki">Ellen Egyptien</a></h3>
+<h4 local-id=3D"42ac15f2-5d99-4aa2-911f-e834093c2727" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.11">Current things:</h4>
+<ul local-id=3D"a788b897-db69-4a02-8325-eacf6867f068">
+<li local-id=3D"aca3a484-f815-4383-8311-150d9533d812">
+<p local-id=3D"e561ee7d828b">Staging environment is up and running &amp; In=
+frastructure prerequisites are in place.</p></li>
+</ul>
+<h4 local-id=3D"d10436c5-f618-4ffc-b237-ce1fa317aa79" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.11">Next steps:</h4>
+<ul local-id=3D"6ed6d6dc-b98d-466e-bc61-2ae3e37c3785">
+<li local-id=3D"765fed6d-4977-4139-bf52-1bcd3beb0df6">
+<p local-id=3D"64cda7494fee">Walking Nicole through the flows one last time=
+</p></li>
+<li local-id=3D"b853eb38-1bcf-4712-8155-3d7021e756cd">
+<p local-id=3D"9113edd7a327">Clarifying whether <a class=3D"external-link" =
+href=3D"mailto:invoice@verkstedt.com" rel=3D"nofollow">invoice@verkstedt.co=
+m</a> should be directly connected for real invoice ingestion.</p></li>
+<li local-id=3D"d9ce41e2-de35-4ff2-8520-7abe44a82fee">
+<p local-id=3D"db022cad2bfa">Deploy to production =E2=86=92 QA Nicole.</p><=
+/li>
+</ul>
+<h4 local-id=3D"6d7fb84b-f132-48a1-b22a-be1bf6b6ac67" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.11">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"f9650cb4-637e-42b5-8356-8144546cd722" id=3D"Week7of2026(9=
+=E2=80=9315February)-InfinityGateDashboard"><img src=3D"https://verkstedt.a=
+tlassian.net/wiki/plugins/servlet/confluence/placeholder/error?i18nKey=3Ded=
+itor.placeholder.error&amp;locale=3Dde_DE&amp;version=3D2" title=3D"Cannot =
+invoke &quot;String.indexOf(int)&quot; because &quot;href&quot; is null" cl=
+ass=3D"transform-error" data-encoded-xml=3D"%3Cac%3Aemoticon+ac%3Aname%3D%2=
+2rocket%22+ac%3Aemoji-shortname%3D%22%3Arocket%3A%22+ac%3Aemoji-id%3D%221f6=
+80%22+ac%3Alocal-id%3D%229f5b6617-bec4-480d-a7f0-de23484d8066%22+ac%3Aemoji=
+-fallback%3D%22%F0%9F%9A%80%22+%2F%3E"> Infinity Gate Dashboard <a class=3D=
+"confluence-userlink user-mention current-user-mention" data-account-id=3D"=
+70121:2235fdae-40fc-4d17-8319-3b371b26cc19" href=3D"https://verkstedt.atlas=
+sian.net/wiki/people/70121:2235fdae-40fc-4d17-8319-3b371b26cc19?ref=3Dconfl=
+uence" target=3D"_blank" data-linked-resource-id=3D"91947010" data-linked-r=
+esource-version=3D"1" data-linked-resource-type=3D"userinfo" data-base-url=
+=3D"https://verkstedt.atlassian.net/wiki">Ben Otzisk</a> <a class=3D"conflu=
+ence-userlink user-mention" data-account-id=3D"712020:1e5cfa2c-91c6-4fd3-a4=
+c7-b032e8b39597" href=3D"https://verkstedt.atlassian.net/wiki/people/712020=
+:1e5cfa2c-91c6-4fd3-a4c7-b032e8b39597?ref=3Dconfluence" target=3D"_blank" d=
+ata-linked-resource-id=3D"1395523597" data-linked-resource-version=3D"1" da=
+ta-linked-resource-type=3D"userinfo" data-base-url=3D"https://verkstedt.atl=
+assian.net/wiki">Ellen Egyptien</a></h3>
+<h4 local-id=3D"a8ae1581-0c3b-4628-a148-d44a764def3b" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.12">Current things:</h4>
+<ul local-id=3D"8e5edd44-aaa8-4ef3-bc35-85f074a3b9fa">
+<li local-id=3D"3ce45559-4112-4a80-abdf-77922e5345b8">
+<p local-id=3D"10ec3b7583be">A manual historical data import was done; curr=
+ent focus is on data sanity checks =E2=9C=85</p></li>
+</ul>
+<h4 local-id=3D"eadd3aca-9ac7-41cc-8e4c-1790baaf03b3" id=3D"Week7of2026(9=
+=E2=80=9315February)-NextSteps:">Next Steps:</h4>
+<ul local-id=3D"0f8c7189-ecac-4ac9-9e06-48dac2f7a7f6">
+<li local-id=3D"aa8a868e-6687-4c69-ab65-435b9de875a8">
+<p local-id=3D"20b70ea19fce">Align with Thomas on how to de-duplicate data =
+(define keys / logic for merging duplicates). =E2=9C=85</p></li>
+<li local-id=3D"c0b26f05-bacf-4adb-a85f-83d2e0a2d83f">
+<p local-id=3D"aeecac9981d8">Clarify with Jonas whether he wants to build t=
+heir own reports on top of the data or needs finished dashboards from us (o=
+r keep his own workflow)</p></li>
+<li local-id=3D"c43e4bdb-331c-4d03-a1e7-f4c91c041d2b">
+<p local-id=3D"d1be1a35611f">If dashboards are required: set up Lightdash i=
+n Google Cloud (self-hosted) and build production dashboards on top of clea=
+ned data.</p></li>
+</ul>
+<h4 local-id=3D"1cf24122-0132-4de6-b372-004b38453eee" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.12">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"d0c47abb-ac66-47f8-ad50-c7ddc1ff42f8" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=95=B5=EF=B8=8FISO-certification">=F0=9F=95=B5=
+=EF=B8=8F ISO-certification <a class=3D"confluence-userlink user-mention" d=
+ata-account-id=3D"712020:1e5cfa2c-91c6-4fd3-a4c7-b032e8b39597" href=3D"http=
+s://verkstedt.atlassian.net/wiki/people/712020:1e5cfa2c-91c6-4fd3-a4c7-b032=
+e8b39597?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"139=
+5523597" data-linked-resource-version=3D"1" data-linked-resource-type=3D"us=
+erinfo" data-base-url=3D"https://verkstedt.atlassian.net/wiki">Ellen Egypti=
+en</a></h3>
+<h4 local-id=3D"db7643b1-f562-4a9f-a177-9a58355fecbb" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.13">Current things:</h4>
+<ul local-id=3D"8e5c5b530e89">
+<li local-id=3D"5c9fec198079">
+<p local-id=3D"a797dc6d76b9">The Risk Owner workshop will take place in 2 w=
+eeks.</p></li>
+<li local-id=3D"490faaa4f164">
+<p local-id=3D"8323a3a3983b">Meeting with Nicole &amp; Kerim has taken plac=
+e concerning the Asset Management</p></li>
+<li local-id=3D"1515ff588ea0">
+<p local-id=3D"2d7ff1a1fcc1">Scope Document in the making</p></li>
+</ul>
+<h4 local-id=3D"f4b38760-cf45-4ba2-9f7c-1c08829aa6d5" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.12">Next steps:</h4>
+<ul local-id=3D"34bda080bea8">
+<li local-id=3D"d514de645daa">
+<p local-id=3D"eefa3f53d970">Assessment of my own risks as a Risk Owner wil=
+l take some time</p></li>
+<li local-id=3D"4ca71cabe6e8">
+<p local-id=3D"cfa4cb12e002">Defining the Risk Appetite from GL</p></li>
+</ul>
+<h4 local-id=3D"cebb2466-ba9f-4a07-916b-3cb5044bda75" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.13">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"a6c46f33-4154-4edf-bf97-88f41548cca3" id=3D"Week7of2026(9=
+=E2=80=9315February)-AutomatisationProjectstatus"><img src=3D"https://verks=
+tedt.atlassian.net/wiki/plugins/servlet/confluence/placeholder/error?i18nKe=
+y=3Deditor.placeholder.error&amp;locale=3Dde_DE&amp;version=3D2" title=3D"C=
+annot invoke &quot;String.indexOf(int)&quot; because &quot;href&quot; is nu=
+ll" class=3D"transform-error" data-encoded-xml=3D"%3Cac%3Aemoticon+ac%3Anam=
+e%3D%22white-check-mark%22+ac%3Aemoji-shortname%3D%22%3Awhite_check_mark%3A=
+%22+ac%3Aemoji-id%3D%222705%22+ac%3Alocal-id%3D%2293bcf420-aa54-47df-94f2-8=
+abdf7b02dc3%22+ac%3Aemoji-fallback%3D%22%E2%9C%85%22+%2F%3E"> Automatisatio=
+n Projectstatus <a class=3D"confluence-userlink user-mention" data-account-=
+id=3D"712020:1e5cfa2c-91c6-4fd3-a4c7-b032e8b39597" href=3D"https://verksted=
+t.atlassian.net/wiki/people/712020:1e5cfa2c-91c6-4fd3-a4c7-b032e8b39597?ref=
+=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"1395523597" dat=
+a-linked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data=
+-base-url=3D"https://verkstedt.atlassian.net/wiki">Ellen Egyptien</a></h3>
+<h4 local-id=3D"bb002c50-b44a-4407-90c3-d7097e4bdba7" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.14">Current things:</h4>
+<ul local-id=3D"8961ade7-2e56-4d59-996e-6169683ad779">
+<li local-id=3D"5a962b05-16b5-477a-9937-9f23f76cc4d7">
+<p local-id=3D"c745b49f317f">Prototype is partly functional (with elevenlab=
+s) but still in progress.</p></li>
+<li local-id=3D"dbb4f32d-d076-4eee-aaa5-feada335b82b">
+<p local-id=3D"87de7f78374d">Core flow works; remaining issues are mainly a=
+round fine-tuning.</p></li>
+</ul>
+<h4 local-id=3D"050d3815-820d-4a59-a686-47865e234bfd" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.13">Next steps:</h4>
+<ul local-id=3D"af68dcccbfe9">
+<li local-id=3D"54a92e3b65d3">
+<p local-id=3D"e48c710d7e24">Finish elevenlabs integration.</p></li>
+<li local-id=3D"e846fc92e1af">
+<p local-id=3D"d1c344b481cd">evaluate N8N MCP</p></li>
+<li local-id=3D"4dee5693477b">
+<p local-id=3D"78690d41219c"><a class=3D"confluence-userlink user-mention c=
+urrent-user-mention" data-account-id=3D"70121:2235fdae-40fc-4d17-8319-3b371=
+b26cc19" href=3D"https://verkstedt.atlassian.net/wiki/people/70121:2235fdae=
+-40fc-4d17-8319-3b371b26cc19?ref=3Dconfluence" target=3D"_blank" data-linke=
+d-resource-id=3D"91947010" data-linked-resource-version=3D"1" data-linked-r=
+esource-type=3D"userinfo" data-base-url=3D"https://verkstedt.atlassian.net/=
+wiki">Ben Otzisk</a> Schedule a review</p></li>
+</ul>
+<h4 local-id=3D"3c95fdd2-ddda-44ce-9eef-9ff23d04e8ee" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.14">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"7e9e93e2-8811-4408-9fbe-e7a3ef412089" id=3D"Week7of2026(9=
+=E2=80=9315February)-BillFlow"><img src=3D"https://verkstedt.atlassian.net/=
+wiki/plugins/servlet/confluence/placeholder/error?i18nKey=3Deditor.placehol=
+der.error&amp;locale=3Dde_DE&amp;version=3D2" title=3D"Cannot invoke &quot;=
+String.indexOf(int)&quot; because &quot;href&quot; is null" class=3D"transf=
+orm-error" data-encoded-xml=3D"%3Cac%3Aemoticon+ac%3Aname%3D%22notepad%22+a=
+c%3Aemoji-shortname%3D%22%3Anotepad_spiral%3A%22+ac%3Aemoji-id%3D%221f5d2%2=
+2+ac%3Alocal-id%3D%22cb7325ab-3fdc-443e-965b-653aab0f5709%22+ac%3Aemoji-fal=
+lback%3D%22%F0%9F%97%92%EF%B8%8F%22+%2F%3E"> Bill Flow <a class=3D"confluen=
+ce-userlink user-mention" data-account-id=3D"5e25637f0fa3a90c9eb5e63f" href=
+=3D"https://verkstedt.atlassian.net/wiki/people/5e25637f0fa3a90c9eb5e63f?re=
+f=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"163843" data-l=
+inked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" data-ba=
+se-url=3D"https://verkstedt.atlassian.net/wiki">Georgios Giannoutsos Barkas=
+</a></h3>
+<h4 local-id=3D"f81507ea-5556-4313-a9a3-6449fc5b611a" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.15">Current things:</h4>
+<h4 local-id=3D"b953812f-4047-4b3d-ae43-b125f8594024" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.14">Next steps:</h4>
+<h4 local-id=3D"e2052ba7-934b-4230-ba50-362c97b925ad" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.15">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"850d016b-ae8c-4fe4-bb2a-091722bed078" id=3D"Week7of2026(9=
+=E2=80=9315February)-=F0=9F=92=84TI-Designsystem">=F0=9F=92=84 TI-Designsys=
+tem <a class=3D"confluence-userlink user-mention" data-account-id=3D"5f7a0f=
+028d88b3007518b92b" href=3D"https://verkstedt.atlassian.net/wiki/people/5f7=
+a0f028d88b3007518b92b?ref=3Dconfluence" target=3D"_blank" data-linked-resou=
+rce-id=3D"343572482" data-linked-resource-version=3D"1" data-linked-resourc=
+e-type=3D"userinfo" data-base-url=3D"https://verkstedt.atlassian.net/wiki">=
+Vincent Lammers</a></h3>
+<h4 local-id=3D"f47cfb03-45fd-4973-87f4-149019514b21" id=3D"Week7of2026(9=
+=E2=80=9315February)-Currentthings:.16">Current things:</h4>
+<h4 local-id=3D"85ab21a9-5633-402a-8709-40eebaf69129" id=3D"Week7of2026(9=
+=E2=80=9315February)-Nextsteps:.15">Next steps:</h4>
+<h4 local-id=3D"a63ba6e5-5ca0-474f-92ce-2871ac71a0c0" id=3D"Week7of2026(9=
+=E2=80=9315February)-Helpandrefinementsupportneeded:.16">Help and refinemen=
+t support needed:</h4>
+<h3 local-id=3D"61043bc8-ed91-459b-8b4a-5f890f05a678" id=3D"Week7of2026(9=
+=E2=80=9315February)-=E2=9D=8CNoupdates">=E2=9D=8C No updates</h3>
+<ul local-id=3D"c23a992c-8132-4b05-b5ed-9733be70e432">
+<li local-id=3D"026c3a8c-55e9-43e4-aaa2-d04a302584ac">
+<p local-id=3D"4df1be73-de7c-465e-9251-2671f16b1564">=E2=88=9E Infinity Kon=
+nektor</p></li>
+</ul>
+<h2 local-id=3D"1ea99f75-af7e-49c1-886b-45508018c71d" id=3D"Week7of2026(9=
+=E2=80=9315February)-PeopleandProjects">People and Projects <a class=3D"con=
+fluence-userlink user-mention" data-account-id=3D"5e25637f0fa3a90c9eb5e63f"=
+ href=3D"https://verkstedt.atlassian.net/wiki/people/5e25637f0fa3a90c9eb5e6=
+3f?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=3D"163843" d=
+ata-linked-resource-version=3D"1" data-linked-resource-type=3D"userinfo" da=
+ta-base-url=3D"https://verkstedt.atlassian.net/wiki">Georgios Giannoutsos B=
+arkas</a></h2>
+<ul local-id=3D"e7eb53aa-3ea9-4878-8657-e32010b7fca2">
+<li local-id=3D"df2b64ce-d0ab-4098-8fb4-ef16bfad41ea">
+<p local-id=3D"2ff9f5fe-8f72-41b4-9c5f-7396e60d315f">Clarification for curr=
+ent resource situation needed !!</p></li>
+</ul>
+    </div>
+</body>
+</html>
+------=_Part_458_1015055489.1771327127182
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/f89732f984b5c484746b8125421059d7376df312f56162396b14a0ac83c30555
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAk1BMVEVHcEwiZplVrO5VrO5VrO4i
+ZplVrO4iZplVrO4iZplVrO4iZplVrO4iZpkiZplVrO4iZplVrO4iZpkiZpkiZplVrO5VrO4iZplV
+rO5VrO4iZplVrO4iZpkiZplVrO4xerEiZplVrO4veK4sc6lPo+Mlap44hb4/jclCks5Im9lFltM1
+gLkob6RLn948icRSqOkyfLTrzL1IAAAAIHRSTlMAn59AEBDvv7/vMDCPYFBgICBA34DfcM/PgI9Q
+r3Cv33gbXUAAAAG0SURBVHja3dZXUsMwEIBhd1kuiWtCHMoqvQL3Px0zeQqWtbsKMAH+A3xjrWTZ
+zj1KJll8KZsktyvlrFVXRd5tVpAprbi0d/xWDRSNbZ2xMuTZOsYyq3UppLnFnCMMagM2NFNoE4sH
+Qmv5kyYqmZCHM/xxxxQ0+4cQvf/pUycudU8pPWzfoBRNDVfJlzMBecEQE3agtVjh0sOAVNUw0Hpn
+O6UcDB1RKNYdYxsbqAKkAx8KJQad3szQ82eoAbStGRprD4R14m5/DkQrA+P3jpFLQQfmd0RQ0Ct2
+QX4dip1vghJ7aItPiD/s/dCW6U4qKOion+2o1JxCAtmyL0UJsjCsLeOSrTnQQnvF9OAGyPlRaMqB
+3hlQw4F2vcM4D3QonLK2v5/n61JFMfvByzbWqUcc2rC/tDl1QZpqE+RQ4ltPvCojDDorTArYU9oo
+NI97BpYKL+pfSnLYWa8UkcOS1mfFgeiB7xVZyflF2tFOzLpQHEa/HqoaMdWhbhRaKSNXgim3YjN5
+DWiCRxUCyNyQsSoJjOqUdICXJKRCAlfCV+cCOxeFgJ9EVwYWOVh3gQoMEnxHOH+oD+qQe2emyBLU
+AAAAAElFTkSuQmCC
+------=_Part_458_1015055489.1771327127182--
