@@ -175,18 +175,8 @@ Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalen
 
 #
 
-# **5. Roadmap / Comfort Features**
+# **5. Roadmap**
 
-- \[x\] **Slack-Feedback nach erfolgreichem Update:**  
-  Nach Abschluss des Interviews wird automatisch eine Antwort unter der ursprünglichen Slack-Nachricht gepostet (z. B. Bestätigung/Checkmark). Der ElevenLabs-Agent übergibt `slack_ts` an `submit_status_report` – n8n antwortet per Slack API im Thread. *(Implementiert im Workflow.)*  
-- \[x\] **Erneutes Bearbeiten ermöglichen:**  
-  Im Slack-Thread wird der Link zum erzeugten Google Doc gepostet (Node „Post Google Doc link in thread“), damit POs und ggf. weitere Projekt-Owner das Dokument vor der Konsolidierung nachbearbeiten können. *(Implementiert im Workflow.)*  
-- \[ \] **Slot-Reservierung & Doppelbuchungen verhindern:**  
-  Der Webhook `verify_slot_is_empty` prüft für eine Kombination aus `project_id`, `kw`, `year`, ob bereits ein Eintrag existiert (`return_boolean.slot_empty`). Dieser Mechanismus kann erweitert werden, um Mehrfacheingaben zu erkennen und gezielt auf "Update statt Neu-Anlage" umzuschalten.  
-- \[ \] **Wöchentliche Konsolidierung:**  
-  Siehe Schritt 6; neuer n8n-Workflow „Project Status Consolidation“ (Export: `Project Status Consolidation.json`). Kombiniert alle Status-Docs der aktuellen KW zu einer Markdown-Datei und committet sie ins Repo (`reports/combined/{YYYY}-KW{WW}-project-status.md`).  
 - \[ \] **Confluence-Sync (Stretch):**  
   Projektstatus aus GitHub (kombinierte Markdown-Datei) in die bestehende Confluence-Projektstatus-Seite übertragen (ersetzt manuelles Copy-Paste).  
-- \[ \] **Dashboard-Integration:**  
-  Zukünftig können die Daten aus `project_status_overview` in ein Reporting-Dashboard (z.B. Infinity Gate / Lightdash) überführt werden, um Aggregatsichten über alle Projekte zu erhalten.
 
