@@ -545,6 +545,39 @@
     },
     {
       "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0A3NUD8DD5",
+          "mode": "id"
+        },
+        "text": "=Statusbericht angelegt. Zum Nachbearbeiten (z. B. mit weiteren POs): https://docs.google.com/document/d/{{ $('Create a document').item.json.id }}/edit",
+        "otherOptions": {
+          "thread_ts": {
+            "replyValues": {
+              "thread_ts": "={{ $('Submit status report').item.json.body.slack_ts }}"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.4,
+      "position": [
+        0,
+        400
+      ],
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "Post Google Doc link in thread",
+      "webhookId": "dedf6605-4d79-432a-841f-b5746e2da69e",
+      "credentials": {
+        "slackApi": {
+          "id": "EJLrJ9PwnDzNVVZS",
+          "name": "project-status-interviewer"
+        }
+      }
+    },
+    {
+      "parameters": {
         "operation": "get",
         "dataTableId": {
           "__rl": true,
@@ -1271,6 +1304,17 @@
       ]
     },
     "Insert row": {
+      "main": [
+        [
+          {
+            "node": "Post Google Doc link in thread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post Google Doc link in thread": {
       "main": [
         [
           {

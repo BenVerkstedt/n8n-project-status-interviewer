@@ -1,4 +1,4 @@
-**id: "SOP-PROJ-002" title: "Automatisierter Projektstatus-Interviewer (Slack + ElevenLabs)" version: "0.1.0-DRAFT" owner: "Ellen Egyptien" tech_lead: "Andreas" compliance_lead: "Jonas (eHex)" last_updated: "2026-02-18" tags: ["Project Management", "Reporting", "Interactive", "n8n"]**
+**id: "SOP-PROJ-002" title: "Automatisierter Projektstatus-Interviewer (Slack + ElevenLabs)" version: "0.1.0-DRAFT" owner: "Ellen Egyptien" tech_lead: "Andreas" compliance_lead: "Jonas (eHex)" last_updated: "2026-02-20" tags: ["Project Management", "Reporting", "Interactive", "n8n"]**
 
 #
 
@@ -126,7 +126,9 @@ Alle Tools rufen die n8n-Cloud-Instanz `https://verkstedt.app.n8n.cloud/webhook/
    - `## Support needed: {support_needed}`.  
 7. Node `Insert row` schreibt anschließend eine neue Zeile in `project_status_overview` mit:  
    - `year`, `kw`, `project_name`, `project_owner`, `project_id`, `document_id`, `drive_folder_id`.  
-8. Node `Respond to Webhook4` bestätigt ElevenLabs den erfolgreichen Abschluss (kann für Error-Handling genutzt werden).
+8. Node `Post Google Doc link in thread` (Slack) postet im gleichen Slack-Thread eine Bot-Antwort mit dem Link zum angelegten Google Doc (zum Nachbearbeiten durch POs bzw. weitere Projekt-Owner).  
+9. Node `Update Slack message` setzt die Reaction (weißer Haken) an der ursprünglichen Nachricht.  
+10. Node `Respond to Webhook4` bestätigt ElevenLabs den erfolgreichen Abschluss (kann für Error-Handling genutzt werden).
 
 ## **Schritt 5: Historische Kontextabfrage (optional)**
 
@@ -174,10 +176,10 @@ Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalen
 
 # **5. Roadmap / Comfort Features**
 
-- \[ \] **Slack-Feedback nach erfolgreichem Update:**  
-  Nach Abschluss des Interviews automatisch eine Antwort unter der ursprünglichen Slack-Nachricht posten (z.B. "✅ Status für {ProjectName} in KW {WW}/{YYYY} aktualisiert."). Der ElevenLabs-Agent übergibt bereits `slack_ts` an `submit_status_report` – n8n kann damit per Slack API `chat.postMessage` mit `thread_ts` antworten.  
-- \[ \] **Erneutes Bearbeiten ermöglichen:**  
-  Im Slack-Thread den Link zum erzeugten Google Doc posten, damit der Project Owner kleinere Korrekturen nachträglich direkt im Dokument vornehmen kann.  
+- \[x\] **Slack-Feedback nach erfolgreichem Update:**  
+  Nach Abschluss des Interviews wird automatisch eine Antwort unter der ursprünglichen Slack-Nachricht gepostet (z. B. Bestätigung/Checkmark). Der ElevenLabs-Agent übergibt `slack_ts` an `submit_status_report` – n8n antwortet per Slack API im Thread. *(Implementiert im Workflow.)*  
+- \[x\] **Erneutes Bearbeiten ermöglichen:**  
+  Im Slack-Thread wird der Link zum erzeugten Google Doc gepostet (Node „Post Google Doc link in thread“), damit POs und ggf. weitere Projekt-Owner das Dokument vor der Konsolidierung nachbearbeiten können. *(Implementiert im Workflow.)*  
 - \[ \] **Slot-Reservierung & Doppelbuchungen verhindern:**  
   Der Webhook `verify_slot_is_empty` prüft für eine Kombination aus `project_id`, `kw`, `year`, ob bereits ein Eintrag existiert (`return_boolean.slot_empty`). Dieser Mechanismus kann erweitert werden, um Mehrfacheingaben zu erkennen und gezielt auf "Update statt Neu-Anlage" umzuschalten.  
 - \[ \] **Wöchentliche Konsolidierung:**  
