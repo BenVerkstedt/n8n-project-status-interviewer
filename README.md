@@ -116,6 +116,12 @@ https://elevenlabs.io/app/talk-to?agent_id=...&branch_id=...&var_project_id={{ $
 5. **Consolidation workflow (optional):**  
    Import `n8n/Project Status Consolidation.json`. It runs on a schedule (e.g. Thursday 08:00), reads `project_status_overview` for the current calendar week, fetches each project’s Google Doc, combines them into one Markdown file, and commits it to `reports/combined/YYYY-KWww-project-status.md`. Configure the GitHub node with your repo and credentials; ensure the DataTable ID for `project_status_overview` matches your n8n project.
 
+   **If the GitHub node returns 404 (Not Found):** GitHub often returns 404 for permission problems. Check:
+   - **Credential:** The GitHub token must belong to a user/account that has **push** access to the repository (same account that owns the repo, or a collaborator, or an org member with write access).
+   - **Repository Owner / Name:** Must match the repo URL exactly (e.g. `https://github.com/Owner/repo-name` → Owner = `Owner`, Repository = `repo-name`). No typos, correct case.
+   - **Branch:** Use the repo’s default branch (`main` or `master`). In the node, set **Branch** to that value.
+   - **Scopes:** For a Personal Access Token, it must have the `repo` scope (full control for private repos).
+
 ---
 
 ## Dependencies
