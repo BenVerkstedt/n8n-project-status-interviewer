@@ -3,9 +3,11 @@
 This repository contains the configuration and SOPs for the automated weekly project status interviewer, built with **n8n** and an **ElevenLabs voice agent**.
 
 The goal is to replace the manual Confluence status roundup with:
+
 - a weekly Slack reminder in a shared channel,
 - a voice interview per project (ElevenLabs),
-- and a structured Google Docs report plus a tracking table in n8n.
+- a structured Google Docs report plus a tracking table in n8n,
+- and a **weekly consolidation** of all status docs for the current week into a single Markdown file in this repo (Single Source of Truth), written to `reports/combined/YYYY-KWww-project-status.md`.
 
 ---
 
@@ -15,8 +17,11 @@ The goal is to replace the manual Confluence status roundup with:
   SOPs for the workflow, in particular `SOP-PROJ-002_Project_Status_Interviewer.md` (human + machine readable spec).
 
 - `n8n/`  
-  n8n workflow export, e.g. `Project Status Interviewer - voice.json`.  
-  Import this file into n8n to recreate the workflow.
+  n8n workflow exports: `Project Status Interviewer - voice.json` (Slack + voice interviews + Google Docs) and `Project Status Consolidation.json` (weekly merge of status docs to Markdown and commit to this repo).  
+  Import these files into n8n to recreate the workflows.
+
+- `reports/combined/`  
+  Weekly combined project status reports: one Markdown file per week, named by calendar week and name (e.g. `2026-KW08-project-status.md`). Populated by the **Project Status Consolidation** workflow.
 
 - `agent_configs/`, `agents.json`, `tools.json`, `tests.json`, `tool_configs/`, `test_configs/`  
   ElevenLabs **Agents CLI** project structure. Used to pull/push the voice agent configuration.
@@ -28,8 +33,8 @@ The goal is to replace the manual Confluence status roundup with:
 
 ## Prerequisites
 
-- **Node.js** ≥ 18 (for the ElevenLabs CLI).  
-- An **ElevenLabs** account with access to the Agents platform and API key.  
+- **Node.js** ≥ 18 (for the ElevenLabs CLI).
+- An **ElevenLabs** account with access to the Agents platform and API key.
 - An **n8n** instance (cloud or self-hosted) with:
   - Slack credentials,
   - Google Docs / Google Drive credentials,
@@ -42,13 +47,13 @@ The goal is to replace the manual Confluence status roundup with:
 1. Install the Agents CLI (globally):
 
 ```bash
-npm install -g @elevenlabs/agents-cli
+npm install -g @elevenlabs/cli
 ```
 
 2. Authenticate:
 
 ```bash
-elevenlabs login
+elevenlabs auth login
 ```
 
 3. Initialize (already done in this repo, shown for reference):
@@ -92,19 +97,24 @@ n8n/Project Status Interviewer - voice.json
 ```
 
 2. Configure required credentials in n8n:
+
 - Slack (for the weekly status request message and channel),
 - Google Docs / Drive (for creating & updating status docs),
-- DataTables (for `project_status_overview` and `project_status_project_owners`).
+- DataTables (for `project_status_overview` and `project_status_project_owners`),
+- For the **Project Status Consolidation** workflow: GitHub (token with repo write access) and the same Google Docs credential; set the repository in the GitHub node (e.g. `owner/n8n-project-status-interviewer`) or via `GITHUB_REPO` if supported.
 
 3. Verify the schedule node:  
-Ensure the weekly trigger (e.g. Monday 15:00) and DataTable IDs match your environment.
+   Ensure the weekly trigger (e.g. Monday 15:00) and DataTable IDs match your environment.
 
 4. Update the ElevenLabs URL in the Slack button if needed:  
-The SOP and workflow currently assume a URL of the form:
+   The SOP and workflow currently assume a URL of the form:
 
 ```text
 https://elevenlabs.io/app/talk-to?agent_id=...&branch_id=...&var_project_id={{ $('Code in JavaScript').item.json.project_id }}
 ```
+
+5. **Consolidation workflow (optional):**  
+   Import `n8n/Project Status Consolidation.json`. It runs on a schedule (e.g. Thursday 08:00), reads `project_status_overview` for the current calendar week, fetches each project’s Google Doc, combines them into one Markdown file, and commits it to `reports/combined/YYYY-KWww-project-status.md`. Configure the GitHub node with your repo and credentials; ensure the DataTable ID for `project_status_overview` matches your n8n project.
 
 ---
 
@@ -140,7 +150,7 @@ The operative and technical behaviour of this workflow (including prompts, tools
 - `docs/SOP-PROJ-002_Project_Status_Interviewer.md`
 
 For any changes to the agent prompt or workflow logic:
+
 - update the SOP first,
 - then align n8n and ElevenLabs configuration accordingly,
 - and commit both config + SOP together.
-

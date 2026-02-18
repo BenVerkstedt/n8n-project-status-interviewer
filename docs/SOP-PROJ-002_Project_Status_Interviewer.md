@@ -1,4 +1,4 @@
-**id: "SOP-PROJ-002" title: "Automatisierter Projektstatus-Interviewer (Slack + ElevenLabs)" version: "0.1.0-DRAFT" owner: "Ellen Egyptien" tech_lead: "Andreas" compliance_lead: "Jonas (eHex)" last_updated: "2026-02-17" tags: ["Project Management", "Reporting", "Interactive", "n8n"]**
+**id: "SOP-PROJ-002" title: "Automatisierter Projektstatus-Interviewer (Slack + ElevenLabs)" version: "0.1.0-DRAFT" owner: "Ellen Egyptien" tech_lead: "Andreas" compliance_lead: "Jonas (eHex)" last_updated: "2026-02-18" tags: ["Project Management", "Reporting", "Interactive", "n8n"]**
 
 #
 
@@ -8,18 +8,20 @@
 Wöchentliche Projektstatus-Updates nicht mehr manuell in Confluence einsammeln, sondern projektverantwortliche Personen automatisiert per Slack erinnern und per Voice-Interview (ElevenLabs) strukturiert durch den Status führen.
 
 **Kern-Logik:**  
-Der Workflow schickt einmal pro Woche eine Sammel-Nachricht in einen definierten Slack-Channel. Pro Projekt werden die zugehörigen Project Owner (Lookup über n8n DataTable) mit einem `@` erwähnt und erhalten einen Button, der ein ElevenLabs-Interview startet. Die Antworten (Current Things, Next Steps, Help Needed) werden anschließend als strukturierter Text in ein Google Doc geschrieben und mit der Projekt- und Kalenderwochen-Information in einer DataTable versioniert abgelegt.
+Der Workflow schickt einmal pro Woche eine Sammel-Nachricht in einen definierten Slack-Channel. Pro Projekt werden die zugehörigen Project Owner (Lookup über n8n DataTable) mit einem `@` erwähnt und erhalten einen Button, der ein ElevenLabs-Interview startet. Die Antworten (Current Things, Next Steps, Help Needed) werden anschließend als strukturierter Text in ein Google Doc geschrieben und mit der Projekt- und Kalenderwochen-Information in einer DataTable versioniert abgelegt. Nach dem Interview haben die Project Owner Zeit, die Google Docs bei Bedarf zu bearbeiten. Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalenderwoche zu einem kombinierten Markdown-Dokument zusammengeführt und ins GitHub-Repo geschrieben (eine Datei pro Woche, Single Source of Truth).
 
 **Output:**  
 - Pro Projekt und Kalenderwoche ein Google-Doc-Statusbericht (`Statusbericht_{ProjectName}_{YYYY}_KW{WW}`) im hinterlegten Drive-Ordner.  
 - Ein Eintrag in der DataTable `project_status_overview` (inkl. `project_id`, `project_name`, `kw`, `year`, `document_id`, `drive_folder_id`).  
-- Transparente Slack-Historie im gemeinsamen Project-Owner-Channel.
+- Transparente Slack-Historie im gemeinsamen Project-Owner-Channel.  
+- Wöchentlich eine kombinierte Markdown-Datei im Repo (z. B. `reports/combined/{YYYY}-KW{WW}-project-status.md`) mit allen Projektstatus der aktuellen KW.
 
 **Security Level:**  
 Medium–High (interne Projekt- und Personeninformationen; PII-Check empfohlen, insbesondere bei Freitext im Interview).
 
 **Artifacts / Quellen (Repo):**  
 - n8n-Workflow: `Project Status Interviewer - voice.json`  
+- n8n-Workflow: `Project Status Consolidation.json` (wöchentliche Konsolidierung Google-Docs → Markdown → GitHub)  
 - ElevenLabs-Agent (Konfiguration, Prompt, Tools): `elevenlabs_agent.json`
 
 #
@@ -138,6 +140,21 @@ Alle Tools rufen die n8n-Cloud-Instanz `https://verkstedt.app.n8n.cloud/webhook/
    - `{"previous_summary": "…"}`
 7. Node `Respond to Webhook2` liefert dieses JSON an ElevenLabs zurück, damit der Voice-Agent mit historischem Kontext starten kann.
 
+## **Schritt 6: Wöchentliche Konsolidierung (Single Source of Truth)**
+
+**Hinweis:** Dieser Schritt wird von einem **separaten** n8n-Workflow ausgeführt („Project Status Consolidation“).
+
+**Zweck:**  
+Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalenderwoche zu einem kombinierten Markdown-Dokument zusammengeführt und ins GitHub-Repository dieses Projekts geschrieben. So haben Project Owner nach dem ersten Reminder und dem Interview noch Zeit, die Google Docs zu bearbeiten; die finale Fassung wird dann automatisch als Single Source of Truth versioniert.
+
+**System Action (n8n – Consolidation Workflow):**
+1. **Trigger:** Schedule (z. B. einmal pro Woche, konfigurierbare Uhrzeit wie Donnerstag 08:00 oder Tag vor dem Projektstatus-Meeting). Eingabe: aktuelle Kalenderwoche (`$now.toFormat('WW')`, `$now.toFormat('yyyy')`).
+2. **Datenquelle:** DataTable `project_status_overview` – Filter auf `kw` = aktuelle KW und `year` = aktuelles Jahr; pro **distinkter** `project_id` (bzw. `project_name`) **ein** Eintrag verwenden (bei Mehrfacheinträgen z. B. neuester Eintrag nach `createdAt`).
+3. **Pro Projekt:** `document_id` aus der Tabelle → Google-Doc-Inhalt abrufen („Get document“) → Inhalt als Markdown aufbereiten (Export oder Konvertierung je nach API-Format).
+4. **Kombination:** Ein Markdown-Dokument pro Woche mit Struktur: Überschrift „Week {KW} of {YYYY} ({Datumsbereich})“, dann pro Projekt ein Abschnitt mit Projektname (ggf. Owner), „Current things:“, „Next steps:“, „Help and refinement support needed:“.
+5. **Ablage:** Commit ins GitHub-Repository, eine Datei pro Woche im Ordner `reports/combined/`, Benennung nach Kalenderwoche und Name: z. B. `reports/combined/{YYYY}-KW{WW}-project-status.md`. Bei fehlenden Einträgen für die aktuelle KW: Workflow sauber beenden, kein Commit mit leerem Inhalt.
+6. **Stretch Goal (Roadmap):** Confluence-Sync – kombinierten Projektstatus aus dem GitHub-Repo in die bestehende Confluence-Seite übernehmen (ersetzt manuelles Copy-Paste).
+
 #
 
 # **4. Human Review & Governance**
@@ -163,6 +180,10 @@ Alle Tools rufen die n8n-Cloud-Instanz `https://verkstedt.app.n8n.cloud/webhook/
   Im Slack-Thread den Link zum erzeugten Google Doc posten, damit der Project Owner kleinere Korrekturen nachträglich direkt im Dokument vornehmen kann.  
 - \[ \] **Slot-Reservierung & Doppelbuchungen verhindern:**  
   Der Webhook `verify_slot_is_empty` prüft für eine Kombination aus `project_id`, `kw`, `year`, ob bereits ein Eintrag existiert (`return_boolean.slot_empty`). Dieser Mechanismus kann erweitert werden, um Mehrfacheingaben zu erkennen und gezielt auf "Update statt Neu-Anlage" umzuschalten.  
+- \[ \] **Wöchentliche Konsolidierung:**  
+  Siehe Schritt 6; neuer n8n-Workflow „Project Status Consolidation“ (Export: `Project Status Consolidation.json`). Kombiniert alle Status-Docs der aktuellen KW zu einer Markdown-Datei und committet sie ins Repo (`reports/combined/{YYYY}-KW{WW}-project-status.md`).  
+- \[ \] **Confluence-Sync (Stretch):**  
+  Projektstatus aus GitHub (kombinierte Markdown-Datei) in die bestehende Confluence-Projektstatus-Seite übertragen (ersetzt manuelles Copy-Paste).  
 - \[ \] **Dashboard-Integration:**  
   Zukünftig können die Daten aus `project_status_overview` in ein Reporting-Dashboard (z.B. Infinity Gate / Lightdash) überführt werden, um Aggregatsichten über alle Projekte zu erhalten.
 

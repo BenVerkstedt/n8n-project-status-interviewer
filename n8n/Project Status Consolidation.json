@@ -1,0 +1,225 @@
+{
+  "name": "Project Status Consolidation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 4"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0],
+      "id": "cons-trigger-001",
+      "name": "Weekly Thursday 08:00"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cons-set-kw",
+              "name": "current_kw",
+              "value": "={{ $now.toFormat('WW') }}",
+              "type": "string"
+            },
+            {
+              "id": "cons-set-year",
+              "name": "year",
+              "value": "={{ $now.toFormat('yyyy') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [220, 0],
+      "id": "cons-set-002",
+      "name": "Current KW and Year"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "swj7LKIJWI42CJSM",
+          "mode": "list",
+          "cachedResultName": "project_status_overview",
+          "cachedResultUrl": "/projects/dAHyp2o5R1jdG6yX/datatables/swj7LKIJWI42CJSM"
+        },
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [440, 0],
+      "id": "cons-dt-003",
+      "name": "Get overview rows"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst setNode = $('Current KW and Year').first().json;\nconst currentKw = String(setNode.current_kw ?? '').trim();\nconst year = String(setNode.year ?? '').trim();\n\n// Normalize for comparison (DataTable may return kw/year as number or string, e.g. 8 vs \"08\")\nconst normKw = (v) => String(v ?? '').replace(/^0+/, '') || '0';\nconst normYear = (v) => String(v ?? '').trim();\n\n// Filter by current KW and year\nlet rows = items\n  .filter(item => normKw(item.json.kw) === normKw(currentKw) && normYear(item.json.year) === normYear(year))\n  .map(item => item.json);\n\nif (rows.length === 0) {\n  return [{ json: { _skip: true, current_kw: currentKw, year, reason: 'No entries for this week' } }];\n}\n\n// Dedupe by project_id: keep newest by createdAt\nconst byProject = {};\nfor (const row of rows) {\n  const id = row.project_id;\n  const existing = byProject[id];\n  if (!existing || new Date(row.createdAt) > new Date(existing.createdAt)) {\n    byProject[id] = row;\n  }\n}\n\nconst distinct = Object.values(byProject).map(row => ({\n  json: {\n    document_id: row.document_id,\n    project_name: row.project_name || 'Unknown Project',\n    project_owner: row.project_owner || '',\n    project_id: row.project_id,\n    current_kw: currentKw,\n    year\n  }\n}));\n\nreturn distinct;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [660, 0],
+      "id": "cons-code-004",
+      "name": "Filter and dedupe by project"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cons-if-cond",
+              "leftValue": "={{ $json._skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [880, 0],
+      "id": "cons-if-005",
+      "name": "Any entries this week?"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "={{ $json.document_id }}"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [1100, 120],
+      "id": "cons-gdoc-006",
+      "name": "Get document",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "k1EoHiegV47vo2db",
+          "name": "Google Docs account - Andreas"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nif (items.length === 0) {\n  return [{ json: { markdown: '', current_kw: '', year: '', _empty: true } }];\n}\n\nconst first = items[0].json;\nconst currentKw = first.current_kw || $('Filter and dedupe by project').first().json.current_kw;\nconst year = first.year || $('Filter and dedupe by project').first().json.year;\n\n// Week date range for title (e.g. 9–15 February)\nconst now = new Date();\nconst startOfWeek = new Date(now);\nconst day = startOfWeek.getDay();\nconst diff = (day === 0 ? -6 : 1) - day;\nstartOfWeek.setDate(startOfWeek.getDate() + diff);\nconst endOfWeek = new Date(startOfWeek);\nendOfWeek.setDate(endOfWeek.getDate() + 6);\nconst fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });\nconst weekRange = `${fmt(startOfWeek)} – ${fmt(endOfWeek)}`;\n\nconst lines = [];\nlines.push(`# Week ${currentKw} of ${year} (${weekRange})`);\nlines.push('');\n\nfor (const item of items) {\n  const projectName = item.project_name || 'Unknown Project';\n  const projectOwner = item.project_owner ? ` ${item.project_owner}` : '';\n  lines.push(`## ${projectName}${projectOwner}`);\n  lines.push('');\n  const content = item.content || item.body || item.text || item.data || '';\n  if (typeof content === 'string') {\n    lines.push(content.trim());\n  } else if (content && typeof content === 'object') {\n    lines.push(JSON.stringify(content));\n  }\n  lines.push('');\n  lines.push('---');\n  lines.push('');\n}\n\nconst markdown = lines.join('\\n');\nreturn [{ json: { markdown, current_kw: currentKw, year, _empty: false } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1320, 120],
+      "id": "cons-code-007",
+      "name": "Combine to single Markdown"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cons-if2-cond",
+              "leftValue": "={{ $json._empty }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1540, 120],
+      "id": "cons-if2-008",
+      "name": "Has content?"
+    },
+    {
+      "parameters": {
+        "operation": "createOrUpdate",
+        "repository": "n8n-project-status-interviewer",
+        "filePath": "=reports/combined/{{ $json.year }}-KW{{ $json.current_kw }}-project-status.md",
+        "fileContent": "={{ $json.markdown }}",
+        "commitMessage": "=chore: consolidated project status {{ $json.year }} KW{{ $json.current_kw }}",
+        "branch": "main",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [1760, 40],
+      "id": "cons-gh-009",
+      "name": "Commit to GitHub",
+      "credentials": {
+        "githubApi": {
+          "id": "GITHUB_CREDENTIAL_ID",
+          "name": "GitHub account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Weekly Thursday 08:00": {
+      "main": [[{ "node": "Current KW and Year", "type": "main", "index": 0 }]]
+    },
+    "Current KW and Year": {
+      "main": [[{ "node": "Get overview rows", "type": "main", "index": 0 }]]
+    },
+    "Get overview rows": {
+      "main": [[{ "node": "Filter and dedupe by project", "type": "main", "index": 0 }]]
+    },
+    "Filter and dedupe by project": {
+      "main": [[{ "node": "Any entries this week?", "type": "main", "index": 0 }]]
+    },
+    "Any entries this week?": {
+      "main": [
+        [],
+        [{ "node": "Get document", "type": "main", "index": 0 }]
+      ]
+    },
+    "Get document": {
+      "main": [[{ "node": "Combine to single Markdown", "type": "main", "index": 0 }]]
+    },
+    "Combine to single Markdown": {
+      "main": [[{ "node": "Has content?", "type": "main", "index": 0 }]]
+    },
+    "Has content?": {
+      "main": [
+        [],
+        [{ "node": "Commit to GitHub", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "consolidation-v1",
+  "meta": {
+    "instanceId": "58bc80b014303e07f209f1f5092cd304e8b2f3edba5fbc1cb7f21a27b4c47b4d"
+  },
+  "tags": []
+}
