@@ -212,7 +212,7 @@
           "actionFields": [
             {
               "action": "insert",
-              "text": "={{ $('Create a document').item.json.name }}\n\n## Activities: {{ $('Submit status report').item.json.body.activities }}\n\n## Next steps: {{ $('Submit status report').item.json.body.next_steps }}\n\n## Support needed: {{ $('Submit status report').item.json.body.support_needed }}"
+              "text": "={{ $('Create a document').item.json.name }}\n\n## Current things\n\n{{ $('Submit status report').item.json.body.activities }}\n\n## Next steps\n\n{{ $('Submit status report').item.json.body.next_steps }}\n\n## Support needed\n\n{{ $('Submit status report').item.json.body.support_needed }}"
             }
           ]
         }

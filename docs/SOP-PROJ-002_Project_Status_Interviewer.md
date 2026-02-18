@@ -121,9 +121,10 @@ Alle Tools rufen die n8n-Cloud-Instanz `https://verkstedt.app.n8n.cloud/webhook/
 5. Node `Create a document` legt im zugehörigen Google-Drive-Ordner (`drive_folder_id`) ein neues Google Doc an:  
    - Name: `Statusbericht_{ProjectName}_{YYYY}_KW{WW}`.  
 6. Node `Update a document` fügt den eigentlichen Inhalt ein, z.B.:  
-   - `## Activities: {activities}`  
+   - `## Current things: {activities}`  
    - `## Next steps: {next_steps}`  
    - `## Support needed: {support_needed}`.  
+   - **Report-Format:** Die Abschnitte nutzen die Überschriften „Current things“, „Next steps“, „Support needed“. Der Agent (ElevenLabs) liefert für `activities` und `next_steps` thematisch gegliederte Texte mit Bulletpoints; die Strukturvorgaben stehen im Agent-Prompt (Sektion „Report output format“) in `agent_configs/project-status-interviewer.json`.  
 7. Node `Insert row` schreibt anschließend eine neue Zeile in `project_status_overview` mit:  
    - `year`, `kw`, `project_name`, `project_owner`, `project_id`, `document_id`, `drive_folder_id`.  
 8. Node `Post Google Doc link in thread` (Slack) postet im gleichen Slack-Thread eine Bot-Antwort mit dem Link zum angelegten Google Doc (zum Nachbearbeiten durch POs bzw. weitere Projekt-Owner).  
