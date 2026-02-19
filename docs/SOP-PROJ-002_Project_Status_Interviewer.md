@@ -148,14 +148,14 @@ Alle Tools rufen die n8n-Cloud-Instanz `https://verkstedt.app.n8n.cloud/webhook/
 **Hinweis:** Dieser Schritt wird von einem **separaten** n8n-Workflow ausgeführt („Project Status Consolidation“).
 
 **Zweck:**  
-Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalenderwoche zu einem kombinierten Markdown-Dokument zusammengeführt und ins GitHub-Repository dieses Projekts geschrieben. So haben Project Owner nach dem ersten Reminder und dem Interview noch Zeit, die Google Docs zu bearbeiten; die finale Fassung wird dann automatisch als Single Source of Truth versioniert.
+Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalenderwoche zu einem kombinierten Markdown-Dokument zusammengeführt und in ein GitHub-Repository geschrieben (aktuell: dieses Repo; perspektivisch: konfigurierbares Ziel-Repo, siehe Roadmap). So haben Project Owner nach dem ersten Reminder und dem Interview noch Zeit, die Google Docs zu bearbeiten; die finale Fassung wird dann automatisch als Single Source of Truth versioniert.
 
 **System Action (n8n – Consolidation Workflow):**
 1. **Trigger:** Schedule (z. B. einmal pro Woche, konfigurierbare Uhrzeit wie Donnerstag 08:00 oder Tag vor dem Projektstatus-Meeting). Eingabe: aktuelle Kalenderwoche (`$now.toFormat('WW')`, `$now.toFormat('yyyy')`).
 2. **Datenquelle:** DataTable `project_status_overview` – Filter auf `kw` = aktuelle KW und `year` = aktuelles Jahr; pro **distinkter** `project_id` (bzw. `project_name`) **ein** Eintrag verwenden (bei Mehrfacheinträgen z. B. neuester Eintrag nach `createdAt`).
 3. **Pro Projekt:** `document_id` aus der Tabelle → Google-Doc-Inhalt abrufen („Get document“) → Inhalt als Markdown aufbereiten (Export oder Konvertierung je nach API-Format).
 4. **Kombination:** Ein Markdown-Dokument pro Woche mit Struktur: Überschrift „Week {KW} of {YYYY} ({Datumsbereich})“, dann pro Projekt ein Abschnitt mit Projektname (ggf. Owner), „Current things:“, „Next steps:“, „Help and refinement support needed:“.
-5. **Ablage:** Commit ins GitHub-Repository, eine Datei pro Woche im Ordner `reports/combined/`, Benennung nach Kalenderwoche und Name: z. B. `reports/combined/{YYYY}-KW{WW}-project-status.md`. Bei fehlenden Einträgen für die aktuelle KW: Workflow sauber beenden, kein Commit mit leerem Inhalt.
+5. **Ablage:** Commit ins GitHub-Repository (aktuell: dieses Repo), eine Datei pro Woche im Ordner `reports/combined/`, Benennung nach Kalenderwoche und Name: z. B. `reports/combined/{YYYY}-KW{WW}-project-status.md`. Bei fehlenden Einträgen für die aktuelle KW: Workflow sauber beenden, kein Commit mit leerem Inhalt.
 6. **Stretch Goal (Roadmap):** Confluence-Sync – kombinierten Projektstatus aus dem GitHub-Repo in die bestehende Confluence-Seite übernehmen (ersetzt manuelles Copy-Paste).
 
 #
@@ -176,6 +176,9 @@ Kurz vor dem Projektstatus-Termin werden alle Statusberichte der aktuellen Kalen
 #
 
 # **5. Roadmap**
+
+- \[ \] **Fertiges Dokument in separates Repo (Perspektive):**  
+  Das kombinierte Wochen-Markdown (Output der Konsolidierung) perspektivisch in ein anderes Repository legen statt ins aktuelle n8n-Projekt-Repo. Dafür: Ziel-Repo und Pfad konfigurierbar machen (Consolidation-Workflow), Ablageort in dieser SOP und in den Artifacts aktualisieren.
 
 - \[ \] **Confluence-Sync (Stretch):**  
   Projektstatus aus GitHub (kombinierte Markdown-Datei) in die bestehende Confluence-Projektstatus-Seite übertragen (ersetzt manuelles Copy-Paste).  
