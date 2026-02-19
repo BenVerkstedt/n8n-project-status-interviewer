@@ -1,0 +1,16 @@
+{
+  "name": "n8n-project-status-interviewer",
+  "version": "1.0.0",
+  "description": "Configuration and SOPs for the automated weekly project status interviewer, built with n8n and ElevenLabs voice agent",
+  "private": true,
+  "scripts": {
+    "agents:pull": "elevenlabs agents pull",
+    "agents:pull:update": "elevenlabs agents pull --update"
+  },
+  "devDependencies": {
+    "@elevenlabs/agents-cli": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -26,6 +26,9 @@ The goal is to replace the manual Confluence status roundup with:
 - `agent_configs/`, `agents.json`, `tools.json`, `tests.json`, `tool_configs/`, `test_configs/`  
   ElevenLabs **Agents CLI** project structure. Used to pull/push the voice agent configuration.
 
+- `package.json`  
+  Node.js dependency management file. Run `npm install` to install the ElevenLabs Agents CLI and other dependencies.
+
 - `example/`  
   Reference material (e.g. manually written weekly status from Confluence and SOP templates).
 
@@ -42,25 +45,29 @@ The goal is to replace the manual Confluence status roundup with:
 
 ---
 
+## Getting Started
+
+First, install the project dependencies:
+
+```bash
+npm install
+```
+
+---
+
 ## Setup – ElevenLabs Agents CLI
 
-1. Install the Agents CLI (globally):
+1. Authenticate:
 
 ```bash
-npm install -g @elevenlabs/cli
+npx elevenlabs auth login
 ```
 
-2. Authenticate:
-
-```bash
-elevenlabs auth login
-```
-
-3. Initialize (already done in this repo, shown for reference):
+2. Initialize (already done in this repo, shown for reference):
 
 ```bash
 cd n8n-project-status-interviewer
-elevenlabs agents init
+npx elevenlabs agents init
 ```
 
 This creates:
@@ -74,12 +81,12 @@ tool_configs/
 test_configs/
 ```
 
-4. Pull existing agents from ElevenLabs (to sync changes made in the web UI):
+3. Pull existing agents from ElevenLabs (to sync changes made in the web UI):
 
 ```bash
-elevenlabs agents pull
+npx elevenlabs agents pull
 # or, to override local configs with remote changes:
-elevenlabs agents pull --update
+npx elevenlabs agents pull --update
 ```
 
 Your project status interviewer agent will appear as a JSON config in `agent_configs/` and is also described in `docs/SOP-PROJ-002_Project_Status_Interviewer.md`.
@@ -128,24 +135,7 @@ https://elevenlabs.io/app/talk-to?agent_id=...&branch_id=...&var_project_id={{ $
 
 This repo is configuration-first; the only runtime dependency tracked here is the ElevenLabs Agents CLI for local agent management.
 
-- **Global CLI (recommended):**
-
-```bash
-npm install -g @elevenlabs/agents-cli
-```
-
-- **Or as a local dev dependency:**
-
-```bash
-npm init -y              # if you want a package.json
-npm install --save-dev @elevenlabs/agents-cli
-```
-
-In that case, you can run:
-
-```bash
-npx elevenlabs agents pull
-```
+The project includes a `package.json` file that tracks dependencies. Install with `npm install` (see [Getting Started](#getting-started) above).
 
 ---
 
